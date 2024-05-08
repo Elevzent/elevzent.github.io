@@ -1,0 +1,714 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Elevzent">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="0-whoami你好！感谢您购买这门课程；我真诚地希望您会觉得它很有用，并且学到很多。我的名字是卢克，我是一名来自英国的网络安全顾问。 我认为给大家简要介绍一下我过去十年左右的工作经历会很有益，这样可以为我创建这门课程提供一些背景（也许还有一些可信度）。 我于 2013 年 12 月正式开始我的职业生涯，当时刚刚完成 Offensive Security 的 PWB 课程（Pentesting w">
+<meta property="og:type" content="article">
+<meta property="og:title" content="报告编写的艺术-简介">
+<meta property="og:url" content="http://example.com/2024/05/09/%E6%8A%A5%E5%91%8A%E7%BC%96%E5%86%99%E7%9A%84%E8%89%BA%E6%9C%AF-%E7%AE%80%E4%BB%8B/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="0-whoami你好！感谢您购买这门课程；我真诚地希望您会觉得它很有用，并且学到很多。我的名字是卢克，我是一名来自英国的网络安全顾问。 我认为给大家简要介绍一下我过去十年左右的工作经历会很有益，这样可以为我创建这门课程提供一些背景（也许还有一些可信度）。 我于 2013 年 12 月正式开始我的职业生涯，当时刚刚完成 Offensive Security 的 PWB 课程（Pentesting w">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-05-08T16:18:28.000Z">
+<meta property="article:modified_time" content="2024-05-08T16:23:13.222Z">
+<meta property="article:author" content="Elevzent">
+<meta property="article:tag" content="报告编写的艺术">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>报告编写的艺术-简介 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="报告编写的艺术-简介"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        Elevzent
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-05-09 00:18" pubdate>
+          2024年5月9日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          38 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">报告编写的艺术-简介</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="0-whoami"><a href="#0-whoami" class="headerlink" title="0-whoami"></a>0-whoami</h1><p>你好！感谢您购买这门课程；我真诚地希望您会觉得它很有用，并且学到很多。我的名字是卢克，我是一名来自英国的网络安全顾问。</p>
+<p>我认为给大家简要介绍一下我过去十年左右的工作经历会很有益，这样可以为我创建这门课程提供一些背景（也许还有一些可信度）。</p>
+<p>我于 2013 年 12 月正式开始我的职业生涯，当时刚刚完成 Offensive Security 的 PWB 课程（Pentesting with Backtrack，现在是 PWK&#x2F;PEN-200，Pentesting with Kali）并通过了 OSCP 考试（Offensive Security Certified Professional）。我很快被指派参与一项并购交易。这些工作通常非常独特和具有挑战性——我们的任务目标是代表买家对一个组织&#x2F;产品&#x2F;服务进行全面的安全审查，并告知他们潜在即将收购的安全风险。</p>
+<p>审查结果可能会以多种方式影响收购：</p>
+<ul>
+<li>如果发现了灾难性的事情（例如，过去或现在的安全漏洞证据），这可能会阻止交易进行。</li>
+<li>如果解决方案存在系统性安全漏洞，修复它们的成本可能会使交易变得不可行。</li>
+<li>报告结果将被纳入商业协议中，以确定在交易完成之前需要进行补救的领域。</li>
+</ul>
+<p>在典型的合作中，顾问进行评估，将发现整理成报告，并直接传递给客户。客户可以详细审查报告，并与内部知识进行交叉检查，以对其进行情境化和识别不准确之处，然后可以与顾问讨论，顾问随后制作最终修订报告。</p>
+<p>在并购中，这并不总是可能的。 报告被传递给买方，他们可能并不总是能够理解安全发现的全部后果，除非报告清楚地标识它们； 买方在组织背景下可能无法获得与顾问在审查期间拥有的系统、员工或内部信息相同级别的访问权限（尤其是对于最深入的技术尽职调查评估）。此外，作为网络安全顾问，我们被视为专家，有责任向那些不太可能有背景深入探究报告之外内容的关键决策者清晰传达技术发现。</p>
+<p>出于这些原因，我们有责任超越可能被视为“标准”报告实践，确保任何发现都以足够的背景和分析表达，以向无法提供信息的读者传达安全风险和影响。</p>
+<p>那么我为什么要告诉你所有这些呢？</p>
+<p>在我之前的雇主工作的最后五年里，我是一些最复杂（可能也是最冗长）的网络安全工作的技术负责人… 我的主要职责之一是审查团队生成的每一份报告和发现（数量实际上达到了成千上万），确保客户收到高质量的交付成果，为评估和收购的网络安全方面提供信心。随着时间的推移，我观察到报告撰写质量对这类项目的重要性有多么关键，与“标准”的渗透测试工作相比，这些文档对最终客户来说更有价值。在这个角色中，我经常看到我们正在审查的组织的第三方报告，这些报告很少谈到漏洞利用的全部后果，除了“显而易见”的（对于安全专业人员来说）。</p>
+<p>在我制定并购评估报告的质量标准时，我意识到相同的细节、背景和分析水平对所有评估都是有价值的；当我与客户一起处理我们在报告中发现的各种问题时，这一点变得更加明显。客户经常就报告中的发现询问更多细节：</p>
+<ul>
+<li>如果利用这个漏洞会有什么后果？还有什么可能会受到威胁，攻击者可能会寻求造成什么进一步的损害？</li>
+<li>这个漏洞可以访问哪些具体数据？</li>
+<li>哪些用户会受到攻击的影响？</li>
+</ul>
+<p>这些问题本可以通过在报告中包含额外的背景信息来避免，确保清晰地传达安全发现的后果，不仅对客户有帮助，而且对客户内部提出问题与关键利益相关者进行沟通也是有益的。能够将报告传递给客户，然后客户可以轻松地以这种方式传达安全发现的后果，这样更有价值。</p>
+<p>在这门课程中，我将努力分享我在与客户合作并了解他们需求时所学到的知识，并分享所有可能提高报告质量和增加交付价值给客户的地方。</p>
+<h1 id="1-课程简介"><a href="#1-课程简介" class="headerlink" title="1-课程简介"></a>1-课程简介</h1><p>如前所述，该课程的目标是提高您的报告质量和彻底性。这应该会为您和您的组织带来许多好处：</p>
+<ul>
+<li>客户（或如果您是内部测试人员，则是内部利益相关者）从您的报告中获得更多价值。</li>
+<li>随着您的报告提供更多背景信息，需要跟进电话或电子邮件的需求显著减少，帮助客户理解安全发现的更广泛影响。</li>
+<li>负责执行测试以检查问题是否已得到解决（解决验证&#x2F;重新测试）的同事将感谢报告包含他们所需的一切，确保在测试过程中没有任何歧义。</li>
+<li>您的报告读者将会印象深刻，并努力学习您出色的报告撰写能力！</li>
+</ul>
+<p>本课程已被分解为以下章节：</p>
+<ul>
+<li>客户沟通 - 我们如何利用客户的测试要求和知识来改进我们的评估和报告交付物？</li>
+<li>写作风格 - 我们的文本应该如何阅读，我们可以做些什么来确保我们所写的内容易于理解且没有常见的写作问题？</li>
+<li>报告内容 - 报告的典型结构是什么，每个部分应包含什么内容？</li>
+<li>发现撰写 - 我们如何撰写安全发现，以便客户充分了解如果利用该发现会涉及哪些风险？我们如何确保客户有效地整改发现？</li>
+<li>报告交付 - 我们如何安全地处理报告？</li>
+<li>质量保证流程 - 什么是质量保证流程？我们如何准备以确保在整个流程中高效？</li>
+<li>后评估反馈 - 我们如何向客户提供高水平的工作报告？我们如何处理我们的问题和报告中的负面或具有挑战性的反馈？</li>
+<li>整改验证 - 这是什么，如何有效地进行？</li>
+<li>报告生产力 - 当我们写报告时，我们可以做些什么来帮助我们更高效、更有生产力？</li>
+<li>实践作业 - 一些实践性的“端到端”任务，用于查找写作和报告撰写。</li>
+<li>人工智能 - 人工智能在报告撰写中的地位是什么？</li>
+<li>超越课程 - 你接下来可以做什么，以及如何将你学到的知识应用到实践中？</li>
+</ul>
+<p>毕竟，这是一门课程，因此你会发现上面概述的大多数章节都包括让你回答的问题或让你完成的练习。<strong>报告写作既是一门艺术，也是一种技能，只有通过实践才能不断提高</strong>。我曾见过刚从大学毕业的学生加入我的项目，对报告写作几乎没有经验，但最终却以能与行业老手媲美的能力离开。这种转变并非一夜之间发生；它是在我们的审查过程中获得了大量反馈以及他们致力于改进的结果。通过努力工作，他们的报告质量得到了显著提高。我希望本课程提供的指导和实践机会能够紧密复现这一过程，从而加速你的报告写作技能的发展。</p>
+<h1 id="2-课程注意事项"><a href="#2-课程注意事项" class="headerlink" title="2-课程注意事项"></a>2-课程注意事项</h1><p>这门课程将涵盖大量的报告和问题撰写要素，从基础内容、写作风格，一直到我在“whoami”部分提到的上下文改进。如果你是网络安全顾问或安全工程师，你的标准、流程和报告结构可能会以某种方式与我在这门课程中涵盖的内容有所不同 - 这是完全可以预料的。有许多不同的方式可以向客户呈现我们的评估结果，事实上，我们将在这门课程中讨论这些方式。我鼓励你抓住这个机会，看看在你的报告中哪些地方可以做出改进，甚至可以采纳这门课程的建议来改进你的组织报告。</p>
+<p>我的背景来自一家渗透测试安全咨询公司，课程的大部分内容将以这种方式撰写，我将谈论与“客户”或“顾客”合作的经验。这对于作为内部安全团队一部分工作的人可能听起来似乎不适用。然而，我发现这种团队在审核内部应用程序或服务后生成报告资料是很常见的，因此这门课程也与您相关。您的“客户”只是您为其进行评估的业务领域。</p>
+<p>如果您完全是信息安全方面的新手，您可能会发现一些主题或概念陌生。我会尽量保持低知识门槛，并在必要时提供清晰的解释。然而，由于这是一门自学课程，您可能需要进行一些研究才能充分理解特定的网络安全漏洞或概念。互联网是您的朋友！</p>
+<p>课程的很大一部分是基于我对什么样的报告是好报告的看法。这些看法是通过与客户进行广泛互动而形成的。</p>
+<ul>
+<li>高级管理层客户，</li>
+<li>内部安全团队，</li>
+<li>寻求解决问题的开发&#x2F;工程团队。</li>
+</ul>
+<p>我的经验可能与我的许多行业同行不同，有可能有些人会对本课程中提出的某些概念或想法持不同意见。这没关系。我希望通过清晰地阐明我所教授的内容为何如此重要，你会被鼓励去考虑你自己的做法，并确定它们是否最适合你和你的组织。</p>
+<p>请注意，本课程中所有漏洞和示例组织均为虚构，与真实组织的任何相似之处均属巧合。课程中提到了一些知名的第三方软件和服务提供商，但这仅是为了为示例增加背景，而非意在负面描绘这些组织。</p>
+<p>还需要注意的是，本课程不是关于英语语言技能的深入教程。虽然我们将涵盖基础知识并包括特别与报告撰写相关的方面，但主要重点是报告的内容和结构。对于母语不是英语的人，将提供一些有用的技巧，但全面的英语语言培训超出了本课程的范围。</p>
+<p>最后，我不对本课程中提供的建议可能带来的任何负面反馈负责。请记住，遵循我的建议完全是自愿的。重要的是，您自己决定应用什么，基于您认为对您、您的组织和您的客户最有效的内容。虽然我会解释为什么我认为某些方法是有效的，但您可能会发现您并不总是同意我的观点。</p>
+<h1 id="3-报告介绍和课程学习方法"><a href="#3-报告介绍和课程学习方法" class="headerlink" title="3-报告介绍和课程学习方法"></a>3-报告介绍和课程学习方法</h1><p>在我们开始课程之前，我想介绍一下报告的基本内容以及在评估中的作用。我还会分享一些友好的指导，帮助您为即将到来的内容做好准备。</p>
+<h2 id="报告简介"><a href="#报告简介" class="headerlink" title="报告简介"></a>报告简介</h2><h3 id="什么是渗透测试报告？"><a href="#什么是渗透测试报告？" class="headerlink" title="什么是渗透测试报告？"></a>什么是渗透测试报告？</h3><p>渗透测试报告是客户在渗透测试评估结束时收到的文件。通常包含发现的风险信息，以执行摘要和详细的发现列表的形式呈现。除了突出风险外，报告还向客户提供了一份建议清单，以纠正发现的问题并降低风险，以及战略建议，帮助加强整体安全性。</p>
+<p>报告的结构、格式、语调和内容因供应商而异。本课程将重点关注大多数典型渗透测试报告中的所有关键内容。</p>
+<h3 id="渗透测试评估的生命周期"><a href="#渗透测试评估的生命周期" class="headerlink" title="渗透测试评估的生命周期"></a>渗透测试评估的生命周期</h3><p>渗透测试，或称为 pentest，是针对产品、服务、网络或环境的模拟网络攻击，以检查可利用的漏洞。该过程涉及一系列关键步骤的正确执行，以确保进行彻底评估并生成高质量报告。</p>
+<p>以下是渗透测试评估典型生命周期的高级概述，从初始接触到评估后的活动：</p>
+<ol>
+<li>初始联系：客户请求渗透测试供应商评估其组织的某个领域。</li>
+<li>范围界定：供应商与客户合作，在明确评估细节后，制定工作声明（SoW）或提案。</li>
+<li>承诺：一旦客户同意工作声明，测试团队便与客户接洽（假设他们不是同一批规划工作的人）。</li>
+<li>团队介绍：测试团队与客户沟通，介绍自己并确认测试信息。</li>
+<li>评估执行：进行评估，发现结果并撰写报告。</li>
+<li>质量保证：报告通常在提交给客户之前会经过内部质量保证流程。</li>
+<li>报告交付：客户收到报告。</li>
+<li>反馈会议：可能会有一次后评估电话，用于讨论评估结果。</li>
+<li>客户整改：客户解决报告中的一个或多个发现。</li>
+<li>验证：客户要求供应商确认他们纠正的任何问题都已正确修复。</li>
+</ol>
+<p>本课程将涵盖评估生命周期高层视图中步骤 3 到 10，模拟刚收到工作声明并获准与客户互动的测试人员的角色。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="如何对待本课程"><a href="#如何对待本课程" class="headerlink" title="如何对待本课程"></a>如何对待本课程</h3><p>在这些年里我上过的所有课程中，对我影响最深刻的课程内容是那些我花了相当长时间来学习的课程。这些年来，我确实做过很多关于特定编程语言或框架的教程，但我总是匆忙地学完后几天就忘得一干二净。每天复习和练习才能帮助你保持对课程知识的记忆。因此，我建议将课程时间安排在几周内，而不是在一个周末内完成，每天花一两个小时学习是很好的。</p>
+<p>一定要做好自己的笔记，并考虑制作单词卡，尽量避免简单地复制粘贴课程材料。根据你学到的知识做笔记会让你记得更牢固。做笔记真的是个人喜好的事情，但就我个人而言，我用 Obsidian 做笔记，用 Anki 制作单词卡。Anki 对于确保你想要学习的信息得以保留非常有用，如果你之前没有使用过，我建议你试试。如果你想了解更多关于 Anki 的信息，你可以在这里阅读更多关于它是什么以及如何使用的内容 <a target="_blank" rel="noopener" href="https://docs.ankiweb.net/background.html%E3%80%82">https://docs.ankiweb.net/background.html。</a></p>
+<h3 id="练习格式"><a href="#练习格式" class="headerlink" title="练习格式"></a>练习格式</h3><p>在整个课程中，每节课后都会有练习。通常会有一种或多种类别的练习，具体取决于课程内容：</p>
+<ul>
+<li>反思性练习，要求您反思您可能之前完成的工作</li>
+<li>要求您执行适用于上一课的任务的一般练习（尽管少数与您可能已经执行过的先前工作有关）</li>
+<li>超越练习将涉及更深入的任务或目标，有时会涉及到报告写作课程范围之外的主题 - 您需要自学并在这些领域学习</li>
+</ul>
+<p>对于反思练习，请对自己诚实，并花费足够的时间进行工作。通过执行这些练习，您将学到最多。如果您可以收集您最近创建或参与的一些报告 - 这些报告将需要用于课程中的某些练习。</p>
+<h3 id="示例报告"><a href="#示例报告" class="headerlink" title="示例报告"></a>示例报告</h3><p>如果您想了解渗透测试报告是什么样子，GitHub 上有一个存储库，收集了公开提供的报告。如果您对报告撰写还很陌生，并且没有太多经验，浏览其中一些报告可以让您深入了解如何呈现报告发现的多种方式。</p>
+<p>这是链接: <a target="_blank" rel="noopener" href="https://github.com/juliocesarfort/public-pentesting-reports/">https://github.com/juliocesarfort/public-pentesting-reports/</a></p>
+<p>如果您没有访问您编制的任何先前报告的权限，您可以选择其中一些进行反思练习。即使您没有编写它们，分析他人的工作也是有价值的练习。通过推荐这一点，我并不是贬低任何供应商的工作；相反，我建议一个有用的材料来源，用于练习自我批评和学习审查他人的工作。</p>
+<h3 id="人工智能的使用"><a href="#人工智能的使用" class="headerlink" title="人工智能的使用"></a>人工智能的使用</h3><p>有些人可能会尝试使用人工智能来为本课程中的练习生成内容。我会在课程的后期讨论人工智能及其在这一过程中的位置，但我在这里的首要建议是 - 如果您希望正确学习这门手艺，请避免在完成本课程期间使用人工智能。</p>
+<hr>
+<p>说了这么多，让我们开始工作吧！</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%8A%A5%E5%91%8A%E7%BC%96%E5%86%99%E7%9A%84%E8%89%BA%E6%9C%AF/" class="print-no-link">#报告编写的艺术</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>报告编写的艺术-简介</div>
+      <div>http://example.com/2024/05/09/报告编写的艺术-简介/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Elevzent</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年5月9日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/05/09/%E6%8A%A5%E5%91%8A%E7%BC%96%E5%86%99%E7%9A%84%E8%89%BA%E6%9C%AF-%E5%AE%A2%E6%88%B7%E6%B2%9F%E9%80%9A/" title="报告编写的艺术-客户沟通">
+                        <span class="hidden-mobile">报告编写的艺术-客户沟通</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,1649 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Elevzent">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="0-章节（修复验证）介绍在整个课程中，我已经多次提到这个术语，但现在是时候将其作为单独的章节来介绍了。 修正验证通常有另一个名称：“重新测试”。这是客户试图修复（或补救）评估中的一个或多个发现的过程，我们的工作是确保他们正确地完成。 我一直称其为“补救验证”，因为“重新测试”一词可能会给某些客户带来一些困惑。对于那些熟悉该术语的人来说，很明显，我们的意思是重新测试特定的发现，看看它们现在是否已修复">
+<meta property="og:type" content="website">
+<meta property="og:title" content="报告编写的艺术-8 修复验证">
+<meta property="og:url" content="http://example.com/%E6%8A%A5%E5%91%8A%E7%BC%96%E5%86%99%E7%9A%84%E8%89%BA%E6%9C%AF-8%20%E4%BF%AE%E5%A4%8D%E9%AA%8C%E8%AF%81.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="0-章节（修复验证）介绍在整个课程中，我已经多次提到这个术语，但现在是时候将其作为单独的章节来介绍了。 修正验证通常有另一个名称：“重新测试”。这是客户试图修复（或补救）评估中的一个或多个发现的过程，我们的工作是确保他们正确地完成。 我一直称其为“补救验证”，因为“重新测试”一词可能会给某些客户带来一些困惑。对于那些熟悉该术语的人来说，很明显，我们的意思是重新测试特定的发现，看看它们现在是否已修复">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/B1ueD0g/Picture/main/202404231952887.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/B1ueD0g/Picture/main/202404231958163.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/B1ueD0g/Picture/main/202404231952839.png">
+<meta property="article:published_time" content="2024-05-08T17:10:45.000Z">
+<meta property="article:modified_time" content="2024-05-08T17:16:31.952Z">
+<meta property="article:author" content="Elevzent">
+<meta property="article:tag" content="报告编写的艺术">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/B1ueD0g/Picture/main/202404231952887.png">
+  
+  
+  
+  <title>报告编写的艺术-8 修复验证 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="报告编写的艺术-8 修复验证"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<article class="page-content">
+  <h1 id="0-章节（修复验证）介绍"><a href="#0-章节（修复验证）介绍" class="headerlink" title="0-章节（修复验证）介绍"></a>0-章节（修复验证）介绍</h1><p>在整个课程中，我已经多次提到这个术语，但现在是时候将其作为单独的章节来介绍了。</p>
+<p>修正验证通常有另一个名称：“重新测试”。这是客户试图修复（或补救）评估中的一个或多个发现的过程，我们的工作是确保他们正确地完成。</p>
+<p>我一直称其为“补救验证”，因为“重新测试”一词可能会给某些客户带来一些困惑。对于那些熟悉该术语的人来说，很明显，我们的意思是重新测试特定的发现，看看它们现在是否已修复。然而，我见过很多客户认为重新测试实际上是再次执行的整个评估，这通常不是我们的意思。通过使用“修正验证”，可以更清楚地知道，我们谈论的是验证问题是否已修正。我怀疑还有其他名字可以叫这个名字，但这是我近年来使用的名字。</p>
+<p>值得注意的是，如果客户要求“重新测试”，请务必确认他们的意思。他们是否希望再次执行整个评估，或者审查一个或多个发现以查看它们是否已修复？这个简短的问题救了我很多次。</p>
+<p>在下一章中，我们将介绍如何最好地执行修正验证，以及在此过程中应捕获哪些信息并与客户端共享。</p>
+<h1 id="1-修复验证-简介"><a href="#1-修复验证-简介" class="headerlink" title="1-修复验证 - 简介"></a>1-修复验证 - 简介</h1><p>当我们为客户执行修复验证时，我们的工作是评论他们是否适当地解决了一个或多个发现。这还可能包括关闭调查结果（或调整风险评级），如果他们已经实施了适当的缓解措施。除此之外，通常最好评论修正一些发现对先前评估的安全态势的影响。</p>
+<p>鉴于本课的篇幅，我将其分解为以下内容：</p>
+<ul>
+<li>准备：有关如何准备修复验证的建议</li>
+<li>查找状态和关闭结果：结果的关键状态是什么，何时以及如何更改它们</li>
+<li>捕获证据：执行修复验证时需要捕获的内容</li>
+<li>跟踪结果 - 更新报告：如何跟踪结果和更新报告</li>
+<li>跟踪结果 - 其他文档：关于在其他文档中向客户提供结果的其他方式的简短讨论</li>
+<li>课程总结</li>
+</ul>
+<p>为了演示各个部分的更新并显示示例，我将重用课程前面使用的一些材料。</p>
+<p>让我们先来看看我们如何为这项任务做好准备。</p>
+<h1 id="修复问题后从报告中移除-练习"><a href="#修复问题后从报告中移除-练习" class="headerlink" title="修复问题后从报告中移除 - 练习"></a>修复问题后从报告中移除 - 练习</h1><p>在上一课中，我们简要讨论了客户在发现项得到修复后希望你对报告进行更改，使其看起来好像从未发现这些问题的情景。</p>
+<p>以下是一些快速练习（如果它们适用于您）：</p>
+<p><strong>反思练习</strong></p>
+<p>思考一种情况，您被要求从报告中移除已修复的漏洞。您认为这些改动是否会改变与原始文档相比他人对评估结果的理解方式？如果有，具体会如何改变？</p>
+<p>或者，如果您还没有遇到过这种情况：</p>
+<p>查阅一份您编写过或有权访问的安全报告。挑选一些重要的发现，想象客户要求将它们从报告中移除。您认为这些改动是否会改变与原始文档相比他人对评估结果的理解方式？如果有，具体会如何改变？</p>
+<h1 id="11-新发现"><a href="#11-新发现" class="headerlink" title="11-新发现"></a>11-新发现</h1><p>如果已执行了几次修复验证，则可能会看到出现新的发现。这可能是由于实施不当的修复程序造成了新问题，甚至发现了原始测试中没有发现的新内容。我们如何处理这个问题？作为专业人士，如果出现新风险，我们应该始终告知客户。这与报告我们看到的所有发现相同，无论它们是否严重程度较低或看起来不值得客户花时间。当我们看到客户时，我们应该向他们提供风险，以便他们能够就如何进行做出明智的决定。省略新的发现与我们作为安全专业人员试图实现的目标不一致 - 我们应该对我们的客户做正确的事情，让他们知道我们发现了新的东西。</p>
+<h1 id="新发现"><a href="#新发现" class="headerlink" title="新发现"></a>新发现</h1><p>让我们讨论一下在回顾以前的发现时可能会出现新发现的原因。</p>
+<h2 id="行为改变"><a href="#行为改变" class="headerlink" title="行为改变"></a>行为改变</h2><p>通常，新发现是由于先前测试的行为发生变化而产生的，通常是在审查原始发现时被动地接受的。请务必花一些时间了解是否是这种情况，理想情况下，与以前的评估工具输出或日志进行比较。</p>
+<p>在撰写这个新发现时，建议在问题描述中提供一定程度的评论，特别是如果你能够展示行为上的差异，从而说明为什么最初可能没有发现这个发现。注意：你不应该在这里以防御的方式写作，而应该简单地以一种展示以前所看到的和现在所看到的事实的方式写作。</p>
+<h2 id="错过的发现"><a href="#错过的发现" class="headerlink" title="错过的发现"></a>错过的发现</h2><p>如果发现完全被遗漏了，并且您有证据表明它可以在原始评估中被识别出来，您将需要反思最初遗漏的方式和原因，以免再次发生。</p>
+<p>我的建议是在报告中提出调查结果并让客户知道，但是您可能希望与您的团队进行内部讨论，以确定对客户影响的最佳行动方案。</p>
+<h1 id="从实施不力的修复程序中获得的新发现"><a href="#从实施不力的修复程序中获得的新发现" class="headerlink" title="从实施不力的修复程序中获得的新发现"></a>从实施不力的修复程序中获得的新发现</h1><p>我见过几个案例，一个问题的修复会产生新问题。发生这种情况可能有几个原因，最值得注意的是：</p>
+<ul>
+<li>该修复程序实施得很差，结果产生了一种新的发现类型（不相关，足以保证新的发现）</li>
+<li>补救措施结束了调查结果，但所采取的措施并不像应有的那样安全</li>
+</ul>
+<p>如果缺少调查结果的建议部分，则可能导致上述两种情况发生。但是，即使有最好的建议，有时客户也会尝试以自己的方式进行补救，要么忽略提供的指导，要么只使用其中的一部分。</p>
+<p>第一点的一个示例可能是应用修复程序来防止 Web 应用程序中的 SQL 注入漏洞。开发团队成功实现了准备好的语句，以防止 SQL 注入。但是，他们修改了代码，使输出编码不再正确执行。在页面上插入了来自查询的不受信任的用户输入。这导致了一个新的漏洞，特别是跨站点脚本 （XSS）。由于这与原始发现有很大不同，因此最好编写一个新发现，因为对此的描述和建议与 SQL 注入有很大不同。</p>
+<p>对于第二点，我可以举一个例子（我已经看过很多次了）是在哪里找到了服务的明文通信。修复验证通常可以发现连接现在已加密，但是，它没有以最安全的方式实现（自签名证书、启用 SSLv3、弱密码等）。</p>
+<p>如果在关闭一个新问题后添加新问题，则只需将新问题添加到报表中即可。需要在报告的执行摘要更新中讨论出现这些情况的原因。</p>
+<h1 id="如何撰写新发现"><a href="#如何撰写新发现" class="headerlink" title="如何撰写新发现"></a>如何撰写新发现</h1><p>在补救验证过程中发现的结果应以与任何其他发现相同的方式编写。这里唯一的区别可能是区分它们是在评估的单独阶段发现的（在本例中，它将是补救验证阶段）。将这些发现与原始评估区分开来的最简单方法是将它们放在自己的报告部分或测试阶段部分。</p>
+<p>在“报告内容”一章的“发现”一课中，我们介绍了几种评估阶段的风格。下面是一个方法的示例，其中评估被分解为几个独特的测试阶段：</p>
+<blockquote>
+<p>2.2 评估结果</p>
+<p>2.2.1 Web 应用程序评估</p>
+<p>2.2.2 外部基础设施评估</p>
+<p>2.2.3 服务器构建审查</p>
+</blockquote>
+<p>这里没有硬性规定，最好保持一致。假设你对工作的所有阶段都进行了修复验证，但在 Web 应用程序评估中发现了一个新问题。我会添加如下内容：</p>
+<blockquote>
+<p>2.2 评估结果</p>
+<p>2.2.1 Web 应用程序评估</p>
+<p>2.2.2 外部基础设施评估</p>
+<p>2.2.3 服务器构建审查</p>
+<p>2.2.4 Web 应用程序评估 - 修复验证 2024-03-13</p>
+</blockquote>
+<p>虽然标题很长（我相信你可以缩短），但它清楚地表明，本节中的发现与原始 Web 应用程序评估有关，并且是在给定日期的修复验证评估期间发现的。</p>
+<p>如果原始报告具有单个评估阶段，则可以简单地将具有新结果的新阶段称为“修复验证”：</p>
+<blockquote>
+<p>2.2 评估结果</p>
+<p>2.2.1 Web 应用程序评估</p>
+<p>2.2.2 修复验证 2024-03-13</p>
+</blockquote>
+<p>但是，如果您决定创建新部分，请确保明确调查结果与原始工作相关的位置，并且这些调查结果是在修复验证期间发现的。</p>
+<h1 id="更新报告的其他部分"><a href="#更新报告的其他部分" class="headerlink" title="更新报告的其他部分"></a>更新报告的其他部分</h1><p>随着新发现添加到报告中，其他领域可能需要以略有不同的方式进行更新。让我们来谈谈适用的部分。</p>
+<h2 id="调查结果概述"><a href="#调查结果概述" class="headerlink" title="调查结果概述"></a>调查结果概述</h2><h3 id="调查结果概述-1"><a href="#调查结果概述-1" class="headerlink" title="调查结果概述"></a>调查结果概述</h3><p>在本节中，我们详细介绍了每个测试阶段每个风险评级的发现数量。假设我们为修复验证工作添加了一个测试阶段，并将其添加到表中，记录了两个新的低风险问题：</p>
+<table>
+<thead>
+<tr>
+<th><strong>评估阶段</strong></th>
+<th><strong>危急</strong></th>
+<th><strong>高</strong></th>
+<th><strong>中等</strong></th>
+<th><strong>低</strong></th>
+<th><strong>信息</strong></th>
+<th><strong>闭</strong></th>
+<th><strong>总</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Web 应用程序审查</td>
+<td>0</td>
+<td>0</td>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td>4</td>
+<td>14</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>10</td>
+<td>2</td>
+<td>4</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Web 应用程序审核 - 修复验证 2024-03-13</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>总</td>
+<td>0</td>
+<td>0</td>
+<td>9</td>
+<td>15</td>
+<td>2</td>
+<td>8</td>
+<td>36</td>
+</tr>
+</tbody></table>
+<p>如您所见，我们只是为测试阶段添加了一个新行，其中包含每个风险评级的发现总数。</p>
+<h3 id="调查结果清单"><a href="#调查结果清单" class="headerlink" title="调查结果清单"></a>调查结果清单</h3><p>结果列表是你所期望的 - 现有和熟悉的表的额外行：</p>
+<table>
+<thead>
+<tr>
+<th><strong>评估阶段</strong></th>
+<th><strong>查找 ID</strong></th>
+<th><strong>风险</strong></th>
+<th><strong>状态</strong></th>
+<th><strong>标题</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Web 应用程序评估</td>
+<td>CSK</td>
+<td>危急</td>
+<td>Closed</td>
+<td>未经身份验证的 API 端点返回医院配置</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>ZNB</td>
+<td>危急</td>
+<td>Closed</td>
+<td>为管理员帐户设置的默认密码</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>JXY</td>
+<td>危急</td>
+<td>Open</td>
+<td>通用管理员帐户</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>IIB</td>
+<td>高</td>
+<td>Closed</td>
+<td>不安全的直接对象引用</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>CJZ</td>
+<td>高</td>
+<td>Closed</td>
+<td>SQL 注入患者详细信息更新屏幕</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>XQJ</td>
+<td>高</td>
+<td>Closed</td>
+<td>无需 MFA 的管理员登录</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>GLK</td>
+<td>高</td>
+<td>Closed</td>
+<td>可公开访问的管理门户</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>NAA</td>
+<td>高</td>
+<td>Part Closed</td>
+<td>无需身份验证即可公开访问的医院门户</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>WOO</td>
+<td>中等</td>
+<td>Open</td>
+<td>租赁执行不力</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>SAU</td>
+<td>中等</td>
+<td>Open</td>
+<td>可以捕获 EMR 存储的凭证</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>IUF</td>
+<td>中等</td>
+<td>Open</td>
+<td>无速率限制</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>LAM</td>
+<td>中等</td>
+<td>Closed</td>
+<td>可猜测的管理员 URL</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>TDL</td>
+<td>高</td>
+<td>Closed</td>
+<td>未对管理员帐户强制执行 MFA</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>DWM</td>
+<td>高</td>
+<td>Closed</td>
+<td>没有强制执行密码复杂性</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>CIV</td>
+<td>高</td>
+<td>Closed</td>
+<td>未启用 Cloudwatch</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>EDE</td>
+<td>高</td>
+<td>Closed</td>
+<td>SSH 服务器公开</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>CTY</td>
+<td>高</td>
+<td>Open</td>
+<td>用于生产的单个 EC2 实例 – DoS 风险</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>FBB</td>
+<td>高</td>
+<td>Open</td>
+<td>无备份</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>PSY</td>
+<td>高</td>
+<td>Closed</td>
+<td>未启用 MFA 删除的数据库</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>ISN</td>
+<td>中等</td>
+<td>Open</td>
+<td>没有 Web 应用程序防火墙</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>DXU</td>
+<td>中等</td>
+<td>Open</td>
+<td>缺少用户组</td>
+</tr>
+<tr>
+<td>Web 应用程序评估 - 修复验证 2024-03-13</td>
+<td>LPI</td>
+<td>低</td>
+<td>Open</td>
+<td>点击劫持</td>
+</tr>
+<tr>
+<td>Web 应用程序评估 - 修复验证 2024-03-13</td>
+<td>BGF</td>
+<td>低</td>
+<td>Open</td>
+<td>启用 TRACE 方法</td>
+</tr>
+</tbody></table>
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>你如何将新发现纳入执行摘要更新，实际上取决于你所发现的内容的重要性。如果研究结果严重程度较低且影响有限，则不值得过多地讨论它们。但是，我要提到它们：</p>
+<blockquote>
+<p>在修复验证活动（LPI、BFG）期间发现了两个低风险发现。虽然调查结果确实给申请带来了额外的风险，但这些问题的补救可能只是为了深入辩护的目的。</p>
+</blockquote>
+<p>这承认发现了新的发现，并指出它们应该以与其他低风险问题（可能）相同的方式处理。</p>
+<p>如果发现很重要，则可能需要进行更详细的反思：</p>
+<ul>
+<li>新发现是什么？</li>
+<li>这是否改变了所评估内容的安全态势？如果是这样，如何？</li>
+<li>是否需要对此发现的高级修复步骤发表评论？</li>
+</ul>
+<p>在本节中处理新发现时，请务必确保保持上下文和比较性。仔细考虑意外发现的影响将对您有利，因为客户会感谢让他们快速了解安全态势变化的努力。这比快速说明它们存在，并让客户自己弄清楚这些新问题的后果要好得多。</p>
+<h2 id="建议"><a href="#建议" class="headerlink" title="建议"></a>建议</h2><p>仅当新发现需要立即关注或修复可能需要具有战略性质时，建议部分才需要更新。</p>
+<p>编写本节中的任何内容都将遵循“报告内容”一章的“建议”课中给出的相同建议，但也要遵循本章上一课“执行补救验证”中的注意事项。</p>
+<h1 id="直面客户"><a href="#直面客户" class="headerlink" title="直面客户"></a>直面客户</h1><p>让客户知道新问题即将到来是很重要的，一封友好的电子邮件或一个电话来解释这一事实将大大有助于他们接受他们有更多的风险需要管理。许多客户知道，我们无法在每次评估中都找到所有问题;我们永远不应该声称我们将获得 100% 的覆盖率（我们在课程前面提到的）。但是，在没有提醒的情况下向他们发送一份包含几个新问题的新报告可能会让他们感到惊讶。</p>
+<p>如果在原始步骤中完全忽略或遗漏了结果，则此步骤尤为重要。领先于这一点并能够控制叙述的开始（或道歉，如果需要的话）将产生比客户说“这些新问题是什么？为什么在最初的评估中没有发现它们？！</p>
+<p>因此，请向客户发送一封电子邮件，让他们知道将出现新的发现。给他们一些诚实的理由，如果他们想聊聊，给他们打电话。确保您在通话前掌握了所有事实，以便您可以将对话引向最积极的方向。同样，如果您不确定如何进行，或者您觉得您的客户可能会做出不良反应，您应该与您的团队进行内部讨论。</p>
+<h1 id="课程总结"><a href="#课程总结" class="headerlink" title="课程总结"></a>课程总结</h1><p>我们刚刚经历了几个在执行修复验证时发现新问题的场景。</p>
+<p>我们讨论了发生这种情况的一些原因，以及可能需要在报告中更新哪些内容以添加这些新信息。</p>
+<p>我们还考虑了确保提出这些发现而不是被忽视的重要性，以及让客户知道已经发现了新发现的重要性。</p>
+<p>当新的发现出现时，确保向客户提出这些发现（最好是在报告中）符合每个人的最大利益，并且他们为所审查的内容增加的新风险被理解并清楚地表达给客户。虽然客户可能会感到恼火，但他们现在将知道以前没有影响他们的风险，这总比不知道要好。客户应该欣赏任何新事物的提醒，即使这是由于在最初的参与过程中错误地忽略了发现。</p>
+<h1 id="12-新发现-练习"><a href="#12-新发现-练习" class="headerlink" title="12-新发现 - 练习"></a>12-新发现 - 练习</h1><p>在上一课中，我们讨论了在修复验证评估期间发现新发现时该怎么做。我们还讨论了为什么它们可能会在评估完成后出现。</p>
+<p>以下是一些相关的练习，如果适合您。</p>
+<p><strong>反思练习</strong></p>
+<ul>
+<li>回想一下在修复验证或类似工作阶段发现新发现的时间。考虑一下您如何向客户报告这些发现。您对发现这些新风险有何感受？原始报告是否已更新？根据上一课，您认为可能遗漏了什么吗？客户是如何得知新发现的？</li>
+<li>考虑一下您如何处理客户端实施的修复程序引入新漏洞的情况。您是如何与客户沟通的，他们的反应是什么？您是如何记录这些新发现的？</li>
+</ul>
+<p><strong>一般练习</strong></p>
+<ul>
+<li>查看您编写或有权访问的报告。起草两个可能在补救验证期间发现的另外假设性发现 - 一个之前完全遗漏，另一个可能在修复原始发现时出现，详细说明实施不力的修复。考虑哪些报告部分可能需要更新或添加，以及您可以编写的内容。</li>
+<li>更新用于执行修复验证的清单，以包括发现新发现时要采取的步骤。</li>
+</ul>
+<h1 id="13-本章小结"><a href="#13-本章小结" class="headerlink" title="13-本章小结"></a>13-本章小结</h1><p>在本章中，我们介绍了修复验证，也称为重新测试。我们讨论了：</p>
+<ul>
+<li>我们如何准备补救验证</li>
+<li>审查的结果需要获取哪些证据</li>
+<li>对于审查的结果和报告的其他部分，需要哪些评论</li>
+<li>可以发送给客户端的包含流程结果的可交付结果类型</li>
+<li>如何处理客户请求从报表中删除修复后的调查结果</li>
+<li>在执行修复验证时发现新问题时该怎么办</li>
+</ul>
+<p>以下是一些关键点：</p>
+<ul>
+<li>与任何评估一样，请提前做好准备<ul>
+<li>访问以前的报告并仔细查看调查结果和摘要</li>
+<li>请求您可能需要的任何访问权限，以便有足够的时间处理任何访问问题或缺少的特性&#x2F;功能</li>
+<li>与客户就他们期望收到的可交付成果和结果保持一致</li>
+</ul>
+</li>
+<li>在审查结果时，确保始终收集和保存适当的证据<ul>
+<li>重复以前的命令、请求、工具扫描、屏幕截图等以捕获更改</li>
+<li>确保在必要时进行彻底的测试</li>
+<li>应提供适当的评论和证据，以描述发生了什么变化（如果有的话），以及调查结果的最新状态和原因<ul>
+<li>如果需要，还可以对风险评级变化发表评论</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>如果您要更新原始报告文档<ul>
+<li>将修复验证范围追加到范围部分</li>
+<li>更新包含查找计数的任何列表或表，以指示状态的任何更改</li>
+<li>在执行摘要中附加一个部分，以描述所评估内容的安全状况的任何更改。包括已修复的内容和保持不变的内容的演练</li>
+<li>更新建议部分，以涵盖您需要向客户提供的任何重要方向</li>
+<li>确保报告中的所有更新都清楚地标明了适当的部分名称，最好注明日期和草签</li>
+</ul>
+</li>
+<li>如果该过程的结果存储在原始报告的附录中，请确保本节中的评论清晰明了，并且与原始报告部分进行了适当的交叉引用</li>
+<li>如果客户希望新文档通过要审查的结果，请确保引用了原始文档，并且很明显该评估是出于补救验证目的<ul>
+<li>考虑在本文件的附录中列出原始发现的完整列表以供参考</li>
+</ul>
+</li>
+<li>如果您只是向客户提供一个包含问题列表及其各自元数据的电子表格，请考虑<ul>
+<li>在电子表格中添加注释，以描述结果状态已更改（或未更改）的原因</li>
+<li>具有用于查找状态的列</li>
+<li>对行进行颜色编码，以更清楚地了解哪些问题是什么状态</li>
+<li>保留一个单独的文档，用于存储补救验证的证据，无论客户是否愿意</li>
+</ul>
+</li>
+<li>当客户希望您从原始报告文档中删除已修复的问题，而不是标记已修复和未修复的问题时，请小心 - 这可能会改变对文档的看法。但是，如何处理这个问题取决于您。</li>
+<li>如果在修复验证评估中发现新发现，则应将这些发现添加到报告中。<ul>
+<li>应更新适用的报告章节，尤其是执行摘要</li>
+<li>确保您了解为什么这些发现以前可能没有被识别出来，即使它们只是被忽略了</li>
+<li>向您的客户发送电子邮件或安排电话，以检查报告中可能包含的任何新发现</li>
+<li>如果您觉得客户可能会对此非常不满意，请与您的团队讨论最佳方法</li>
+</ul>
+</li>
+</ul>
+<p>修复验证大多可以是一项简单的练习。但是，正如本章所讨论的，我们可以通过多种方式确保在完成此过程时为客户提供重要价值。在修复结果后，将最初报告的风险与最新风险进行深思熟虑的比较，可以帮助客户了解其安全状况。</p>
+<h1 id="2-修复验证-准备"><a href="#2-修复验证-准备" class="headerlink" title="2-修复验证 - 准备"></a>2-修复验证 - 准备</h1><p>执行修复验证通常有两个核心任务：</p>
+<ul>
+<li>查看适用的调查结果，看看它们是否已得到修复</li>
+<li>更新或创建文档以显示已修复的内容和未修复的内容</li>
+</ul>
+<p>为了在这两项任务中取得成功，应进行适当的准备。</p>
+<p>通常，修复验证的任务仅限于几天。有时这些可以很灵活，但根据我的经验，这些可以放在你的日程安排中，围绕其他工作。为避免影响其他工作，这项工作应及时完成，没有问题，就像任何其他评估一样。在本课程开始时，我们讨论了在准备评估时需要积极主动 - 这也适用于这里。</p>
+<p>“预评估”课程下“客户沟通”一章中概述的过程适用于此处。以下是关键点的摘要：</p>
+<ul>
+<li>请求访问以前的报告文档</li>
+<li>如果需要，与客户就预期的可交付成果保持一致</li>
+<li>请求访问修复验证可能需要的测试环境和凭据<ul>
+<li>确保与客户设定期望，并给他们一个最后期限来准备好这些东西——在评估理想前几天。这样，您将能够在评估开始之前测试和验证事情是否正常工作，并且是否符合预期。如果访问不起作用（这种情况经常发生），则有一个小窗口可以纠正此问题。</li>
+</ul>
+</li>
+<li>请记住，不要只检查凭据是否有效，还要利用以前的报告，查看功能、数据、系统或任何其他需要可用于评估的内容是否存在且可访问。值得让您的客户知道您打算这样做，并在您这样做之前查看他们是否有任何问题。</li>
+</ul>
+<p>上述任务涵盖了开始测试所需的内容，但还需要执行的是熟悉先前的评估。如果你是被分配到上一次评估的人，这应该是直截了当的（取决于这是多久以前），如果你不是，这可能会更痛苦一些，但这是值得的。您需要了解您正在查看的内容，以便能够了解最初报告的整体安全状况的变化。以下是您应该执行的几项任务，要么在评估开始之前（时间允许），要么在评估开始时执行：</p>
+<ul>
+<li>仔细阅读执行摘要和建议部分</li>
+<li>通读您要审查的所有发现</li>
+<li>如果您不是原始报告的作者，请查看谁是 - 如果他们有空，请与他们联系，如有任何问题</li>
+</ul>
+<p>请务必通读这些部分，以便了解影响评估时测试内容的风险。有了这些知识，您可以为客户编写有意义的更新和评论，让他们在修复发现后更好地了解其安全状况。</p>
+<hr>
+<p>接下来，让我们看一下结果的常见状态，以及它们在修复验证期间的变化情况。</p>
+<h1 id="3-修复验证-发现状态与关闭发现"><a href="#3-修复验证-发现状态与关闭发现" class="headerlink" title="3-修复验证 - 发现状态与关闭发现"></a>3-修复验证 - 发现状态与关闭发现</h1><p>进行修复验证时，客户的目标是将发现从“开放”状态转移至“关闭”状态。本质上，他们希望得到你的确认，即在原始评估中发现的风险已不再存在。</p>
+<p>我花了一些时间回顾过去使用和见过的一些状态，“开放”和“关闭”是核心状态。其他一些状态常用于展示客户已采取的方向或以某种方式标记漏洞，但它们大多都是“开放”和“关闭”的变体。如果风险仍处于“开放”状态，通常表示其仍然适用；相反，当风险不再相关时，应将其标记为“关闭”。</p>
+<p>接下来，我们将通过一些修复验证场景探讨一些状态变化。</p>
+<h2 id="方案-1-结果已修复"><a href="#方案-1-结果已修复" class="headerlink" title="方案 1 - 结果已修复"></a>方案 1 - 结果已修复</h2><p>假设我们在网络中发现某主机上暴露了Telnet服务。在修复验证过程中，我们发现该问题已不存在，端口已被关闭。这种情况应视为“关闭”。</p>
+<h2 id="方案-2-并非所有实例都已修复"><a href="#方案-2-并非所有实例都已修复" class="headerlink" title="方案 2 - 并非所有实例都已修复"></a>方案 2 - 并非所有实例都已修复</h2><p>这种情况可能很明显，但应该涵盖以防万一。让我们考虑在网络上发现大约 100 个易受攻击的服务。假设客户端修复了 100 项服务中的 95 项。所有服务都可以相互访问。调查结果是否“已关闭”？</p>
+<p>由于环境中仍然存在易受攻击的服务，因此调查结果应保持“开放”状态。如果其余服务有额外的上下文，可能会减少漏洞利用的影响，那么这将是风险评级的更改，而不是关闭调查结果。</p>
+<h2 id="场景-3-发现更难利用，或者影响发生了变化-1"><a href="#场景-3-发现更难利用，或者影响发生了变化-1" class="headerlink" title="场景 3 - 发现更难利用，或者影响发生了变化 #1"></a>场景 3 - 发现更难利用，或者影响发生了变化 #1</h2><p>让我们考虑对一个发现进行回顾，在原始评估中发现了几个缺失的补丁。供应商的补丁风险评级各不相同，从严重到低不等。假设客户端安装了除低严重性补丁之外的所有补丁。</p>
+<p>让我们假设剩余的补丁：</p>
+<ul>
+<li>现在更难利用，因为您需要本地访问</li>
+<li>或者利用它们不会造成相同程度的影响</li>
+</ul>
+<p>很明显，虽然风险仍然存在，但它可能不像以前那样灾难性。那么，调查结果已经结束了吗？</p>
+<p>在风险仍然存在的情况下，不应将调查结果视为已结束。理想情况下，应更新调查结果的风险评级，以反映调查结果的可利用性或影响变化，并且应在调查结果的补救验证注释中捕获推理。</p>
+<p>我提到在某些情况下可能会使用其他状态，这可能是“部分关闭”的候选者。这里的理由可能是，这一发现在风险和影响方面发生了重大变化，虽然它在技术上是“开放的”，但迄今为止完成的补救措施使其可利用性大大降低，以至于它更接近于“封闭”而不是“开放”。然而，这种推理需要谨慎处理。为了清楚起见，最好简单地调整风险评级，并在提供给客户的评论中解释发生了什么变化，为什么风险发生了变化，以及为什么调查结果仍然是“开放”的。</p>
+<h2 id="场景-4-发现更难利用或影响已更改-2"><a href="#场景-4-发现更难利用或影响已更改-2" class="headerlink" title="场景 4 - 发现更难利用或影响已更改 #2"></a>场景 4 - 发现更难利用或影响已更改 #2</h2><p>让我们考虑在代码审查期间发现的跨站点脚本漏洞。在最初的评估中，我们看到没有执行输入验证或输出编码。在修复验证阶段，我们看到客户端实现了一个复杂的基于正则表达式的输出编码器，而不是使用受信任的库来执行任务（根据修复）。</p>
+<p>在审查过程中，我们无法找到绕过过滤的方法，但由于解决方案的实施方式，我们不能排除该发现仍然可以被利用。在这种情况下，我们该怎么办？</p>
+<p>客户端已经实现了一些可能被认为是可靠的东西，但可能仍然会被不受时间限制的攻击者绕过。这个有点难以确定状态。如果您认为这仍然可以被利用，那么从技术上讲，“开放”会更合适，但是，这可能是“部分封闭”可能更公平的一种情况。如果您找不到利用该错误的方法，并且您认为该解决方案足够强大，则可以将其标记为“已关闭”。这些案件需要仔细判断。在这种情况下，客户端没有实现最佳解决方案，即使用受信任的库来完成此任务。在这种情况下，我的建议是将结果标记为“部分关闭”，概述可能有绕过过滤的途径，但在测试期间我们无法被发现，最理想的解决方案是使用受信任的第三方库来执行输出过滤。</p>
+<h2 id="方案-5-修复改变了发现可被利用的位置"><a href="#方案-5-修复改变了发现可被利用的位置" class="headerlink" title="方案 5 - 修复改变了发现可被利用的位置"></a>方案 5 - <strong>修复改变了发现可被利用的位置</strong></h2><p>假设一个 Web 应用程序没有身份验证，可从 Internet 访问，但预期用途是从受信任的网络使用。客户端没有添加身份验证，而是阻止了对服务的 Internet 访问，并且仅接受来自一组受信任的 IP 地址范围的连接。主要问题是缺少身份验证，那么客户端的补救措施是否解决了问题？</p>
+<p>在此示例中，攻击者所需的网络位置更改了发现的可利用性或可能性，并将更改风险评级。该发现仍应被视为“开放”，但是，这可能是一些团队可能会考虑使用“就地缓解”甚至“部分关闭”的另一种情况。虽然这两种状态都应该意味着仍然存在一些风险，但在这种情况下，我可能倾向于将调查结果保留为“开放”，因为根本问题（缺乏身份验证）尚未解决。</p>
+<h2 id="场景-6-发现为误报"><a href="#场景-6-发现为误报" class="headerlink" title="场景 6 - 发现为误报"></a>场景 6 - <strong>发现为误报</strong></h2><p>在测试期间，网络扫描工具发现了具有不受信任证书的服务器，并报告了该证书。假设客户端希望我们关闭问题，因为服务器已经部署了自己的证书（使用内部证书颁发机构）。这是我见过的很常见的误报，当 SSL&#x2F;TLS 证书报告有问题时，测试人员应该仔细检查工具中的数据。</p>
+<p>如果可以验证客户所述内容，该发现应标记为“关闭”。另一种选择是将发现标记为“误报”。这是因为你在声明风险已不再存在（或者可能从未存在）。与其他场景一样，重要的是在修复验证评论中说明状态为何发生变化。</p>
+<hr>
+<p>接下来，让我们来看看在审查可能补救的结果时应该如何收集证据以及收集哪些证据。</p>
+<h1 id="4-修复验证-捕获证据"><a href="#4-修复验证-捕获证据" class="headerlink" title="4-修复验证 - 捕获证据"></a>4-修复验证 - 捕获证据</h1><p>简而言之，作为补救验证过程的一部分收集的证据应与原始报告中收集的证据完美匹配。因此，如果使用 HTTP 请求和响应来显示 Web 应用程序漏洞，则应执行并捕获重复请求和响应以显示差异（或相似之处）。然后，这些证据应该被保存、使用，并可能包含在客户的任何可交付成果中，作为此过程的一部分（例如更新的报告文件）。</p>
+<p>除了证据之外，记下您当时的观察结果也很重要。存储此评论的最佳位置是与捕获的证据一起。某些修复验证不仅仅是简单的检查，还需要进行彻底的审查。本综述应在这些说明中总结。</p>
+<p>让我们浏览一下 Finding Write-ups 一章中的几个 OmniCorp 示例问题，看看我们应该为各种类型的问题收集什么，并浏览一些示例评论。</p>
+<h1 id="可公开访问的-S3-存储桶"><a href="#可公开访问的-S3-存储桶" class="headerlink" title="可公开访问的 S3 存储桶"></a>可公开访问的 S3 存储桶</h1><p>对于<strong>可公开访问的 S3 存储桶</strong>的发现，证据如下：</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs subunit">$ aws s3 ls s3://omnicorp-private-files<br>2024<span class="hljs-string">-01</span><span class="hljs-string">-28</span> 12:35:29      1024 confidential_report.pdf<br>2024<span class="hljs-string">-01</span><span class="hljs-string">-29</span> 08:15:47      2048 employee_data.xlsx<br></code></pre></td></tr></table></figure>
+
+<p>为此发现执行修复验证时，我们希望重复相同的命令并捕获结果。</p>
+<p>假设他们完全删除了存储桶，这是可能返回的内容：</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs mel">$aws s3 <span class="hljs-keyword">ls</span> s3:<span class="hljs-comment">//omnicorp-private-files</span><br><br>An <span class="hljs-keyword">error</span> occurred (NoSuchBucket) when calling the ListObjectsV2 operation: The specified bucket does not exist<br></code></pre></td></tr></table></figure>
+
+<p>用如下注释保存证据就足够了：</p>
+<blockquote>
+<p>使用相同的命令尝试列出原始 S3 存储桶中的文件。AWS 返回了一条错误消息，指示存储桶不再存在。由于存储桶不再存在，并且无法再访问敏感文件，因此此发现已标记为已关闭。</p>
+</blockquote>
+<p>请注意，评注如何清楚地说明导致调查结果状态更改为“已结束”的原因。</p>
+<hr>
+<p>有时，运行相同的命令实际上可能根本不会提供任何输出。假设客户端删除了文件，但保留了 S3 存储桶。这是您将返回的输出：</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs armasm">$ aws <span class="hljs-built_in">s3</span> ls <span class="hljs-built_in">s3</span>:<span class="hljs-comment">//omnicorp-private-files</span><br></code></pre></td></tr></table></figure>
+
+<p>此处，该命令未返回错误，但由于不存在任何文件，因此未返回任何文件。在这种情况下，对于不熟悉 AWS cli 工具在这种情况下如何工作的读者来说，澄清这一点至关重要 - 一些读者可能会认为您忘记包含一些输出。</p>
+<blockquote>
+<p>使用相同的命令尝试列出原始 S3 存储桶中的文件。命令已成功完成，但未返回任何输出。这表示 S3 存储桶可公开访问，但文件已被删除。由于 S3 存储桶仍然存在并且可公开访问，因此此发现仍处于开放状态。但是，由于敏感文件已被删除，因此风险等级已更改为低。</p>
+</blockquote>
+<p>请注意，在这种情况下，结果的严重性已更改，但仍处于打开状态。原因已在评论中体现出来。</p>
+<hr>
+<p>最后，假设返回相同的响应。有些人可能认为不值得再次捕获相同的证据，但我认为最好保持一致。如果您要对报告中的多个发现执行此过程，则尤其如此。</p>
+<p>以下是命令将返回的内容以及您可能给出的评论。</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs subunit">$ aws s3 ls s3://omnicorp-private-files<br><br><br>2024<span class="hljs-string">-01</span><span class="hljs-string">-28</span> 12:35:29      1024 confidential_report.pdf<br>2024<span class="hljs-string">-01</span><span class="hljs-string">-29</span> 08:15:47      2048 employee_data.xlsx<br></code></pre></td></tr></table></figure>
+
+<p>再次运行相同的命令显示文件仍然存在，并且可以在 Internet 上访问。由于 S3 存储桶是可公开访问的，并且敏感文件仍然可用，因此此发现仍处于开放状态。</p>
+<p>在这里，评注明确指出，由于没有变化，问题状态也没有变化。</p>
+<h1 id="在论坛软件上存储跨站点脚本"><a href="#在论坛软件上存储跨站点脚本" class="headerlink" title="在论坛软件上存储跨站点脚本"></a>在论坛软件上存储跨站点脚本</h1><p>让我们看一个 HTTP 请求和响应示例。</p>
+<p>在这里，我们看到服务器返回了未转义的用户提供的 HTML，该 HTML 将在用户的浏览器中呈现：</p>
+<p><strong>请求</strong></p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/forum/post/comment</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>forum.example.com<br><br><span class="language-mel">...</span><br><span class="language-mel"></span><br><span class="language-mel">comment=%3Cscript%3Ealert(<span class="hljs-string">&#x27;XSS&#x27;</span>)%3C%2Fscript%3E</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>响应</strong></p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-meta">HTTP/1.1</span> <span class="hljs-number">200</span> OK<br><br><span class="language-angelscript">...</span><br><span class="language-angelscript"></span><br><span class="language-angelscript">&lt;div <span class="hljs-keyword">class</span>=&quot;<span class="hljs-symbol">comment</span>&quot;&gt;<span class="hljs-symbol">User</span> <span class="hljs-symbol">posted: </span>&lt;<span class="hljs-symbol">script</span>&gt;<span class="hljs-symbol">alert</span>(&#x27;<span class="hljs-symbol">XSS</span>&#x27;)&lt;/<span class="hljs-symbol">script</span>&gt;&lt;/<span class="hljs-symbol">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>在这种情况下，我们希望执行相同的请求并检查响应，但由于发现的类型，我们应该彻底测试参数，以确保其他有效负载不会导致跨站点脚本。假设该发现已修复。让我们看看服务器可能返回的内容以及我们可能留下的评论：</p>
+<p><strong>请求</strong></p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/forum/post/comment</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>forum.example.com<br><span class="hljs-attribute">Cookie</span><span class="hljs-punctuation">: </span>session=dn320487ty30232367<br><br><span class="language-mel">comment=%3Cscript%3Ealert(<span class="hljs-string">&#x27;XSS&#x27;</span>)%3C%2Fscript%3E</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>响应</strong></p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-meta">HTTP/1.1</span> <span class="hljs-number">200</span> OK<br><br><span class="language-xml">SNIP</span><br><span class="language-xml"></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;comment&quot;</span>&gt;</span>User posted: <span class="hljs-symbol">&amp;lt;</span>script<span class="hljs-symbol">&amp;gt;</span>alert(<span class="hljs-symbol">&amp;apos;</span>XSS<span class="hljs-symbol">&amp;apos;</span>)<span class="hljs-symbol">&amp;lt;</span>/script<span class="hljs-symbol">&amp;gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>受影响的参数同时受到原始恶意负载和许多其他有效负载的影响。这是为了确保没有恶意 JavaScript 从 Web 应用程序返回并在浏览器中执行的可能性。Web 应用程序对用户提供的内容执行了彻底的输出编码，然后返回并在 Web 应用程序页面中使用它。由于未发现成功的跨站点脚本有效负载，因此此发现标记为已关闭。</p>
+</blockquote>
+<hr>
+<p>现在让我们假设没有修正发现，并且应用程序的开发人员决定简单地拒绝字符串&lt;脚本&gt;或 </script>提交到服务器。通常有几种方法可以解决这种糟糕的输入验证，但假设我们只是更改了脚本标记内容的大小写，从而允许执行漏洞：</p>
+<p><strong>请求</strong></p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/forum/post/comment</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>forum.example.com<br><span class="hljs-attribute">Cookie</span><span class="hljs-punctuation">: </span>session=dn320487ty30232367<br><br><span class="language-mel"></span><br><span class="language-mel">comment=%3CSCRIPT%3Ealert(<span class="hljs-string">&#x27;XSS&#x27;</span>)%3C%2FSCRIPT%3E</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>响应</strong></p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-meta">HTTP/1.1</span> <span class="hljs-number">200</span> OK<br><br><span class="language-angelscript">SNIP</span><br><span class="language-angelscript"></span><br><span class="language-angelscript">&lt;div <span class="hljs-keyword">class</span>=&quot;<span class="hljs-symbol">comment</span>&quot;&gt;<span class="hljs-symbol">User</span> <span class="hljs-symbol">posted: </span>&lt;<span class="hljs-symbol">SCRIPT</span>&gt;<span class="hljs-symbol">alert</span>(&#x27;<span class="hljs-symbol">XSS</span>&#x27;)&lt;/<span class="hljs-symbol">SCRIPT</span>&gt;&lt;/<span class="hljs-symbol">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>受影响的参数已使用大量恶意负载进行测试。来自服务器的响应表明 Web 应用程序正在拒绝包含“<script>”或“</script>”的所有有效负载。只需将调查结果中的有效载荷报告修改为使用“<SCRIPT>”和“</SCRIPT>”即可绕过这一点。由于该参数仍然容易受到跨站点脚本的影响，因此此发现仍未确定。</p>
+</blockquote>
+<p>对于跨站脚本漏洞（或任何可能具有某些视觉结果的漏洞），最好捕获此漏洞以及屏幕截图。</p>
+<h1 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h1><p>如果最初报告的问题中的证据是屏幕截图，则只需尝试捕获相同的屏幕截图即可。这可能是 Web 应用程序页面的屏幕截图、基于 GUI 的工具的结果或文档中页面的结果。无论它是什么，访问或获取屏幕截图的最新来源，并将其作为证据。请记住与原始报告的证据格式保持一致，除非它不清晰。如果是这样，请按照“报告内容”一章的“证据”课程中概述的内容进行捕获。</p>
+<h1 id="保存证据"><a href="#保存证据" class="headerlink" title="保存证据"></a>保存证据</h1><p>如本课程其他地方所述，在整个评估过程中保存证据很重要 - 补救验证活动也是如此。这包括以下内容：</p>
+<ul>
+<li>工具输出</li>
+<li>Web 代理日志</li>
+<li>截图</li>
+</ul>
+<p>这些应该在评估后保留，以便在对调查结果有任何争议时可以参考，或者如果需要向客户传递可能对他们有用的其他信息来重现问题。</p>
+<hr>
+<p>接下来，让我们看看报告文档的其余部分需要更新的内容。</p>
+<h1 id="5-修复验证-跟踪结果-更新报告"><a href="#5-修复验证-跟踪结果-更新报告" class="headerlink" title="5-修复验证 - 跟踪结果 - 更新报告"></a>5-修复验证 - 跟踪结果 - 更新报告</h1><p>将新信息附加到现有报告文档是我查看正在编译的修复验证结果的最常见方式。关键报告部分通常附加有关风险变化的重要信息，并更新调查结果以表明它们已经过审查，并包括其状态发生变化（或未改变）的原因和证据。</p>
+<p>让我们浏览一些熟悉的部分，看看在执行修复验证后如何更新它们。我不再花时间解释这些部分是什么，如果您想提醒自己它们的用途，请参阅“报告内容”一章中的适用课程。</p>
+<h1 id="调查结果概述-2"><a href="#调查结果概述-2" class="headerlink" title="调查结果概述"></a>调查结果概述</h1><p>报表中有几个结果概述部分可能会受到修复验证结果的影响。让我们来看看我们之前在课程中看过的两个。</p>
+<h2 id="调查结果概述-3"><a href="#调查结果概述-3" class="headerlink" title="调查结果概述"></a>调查结果概述</h2><p>首先，显示问题计数的表格。完成修复验证工作后，可以更新表以仅显示仍处于“未结”状态的结果：</p>
+<table>
+<thead>
+<tr>
+<th><strong>评估阶段</strong></th>
+<th><strong>危急</strong></th>
+<th><strong>高</strong></th>
+<th><strong>中等</strong></th>
+<th><strong>低</strong></th>
+<th><strong>信息</strong></th>
+<th><strong>总</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Web 应用程序审查</strong></td>
+<td>3</td>
+<td>1</td>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td>14</td>
+</tr>
+<tr>
+<td><strong>AWS 配置审查</strong></td>
+<td>1</td>
+<td>3</td>
+<td>4</td>
+<td>10</td>
+<td>2</td>
+<td>20</td>
+</tr>
+<tr>
+<td><strong>总</strong></td>
+<td>4</td>
+<td>4</td>
+<td>9</td>
+<td>15</td>
+<td>2</td>
+<td>34</td>
+</tr>
+</tbody></table>
+<p>这并不总是那么清楚，因此最好包含一个可用于捕获已关闭结果的列。假设上表中的所有关键问题和高问题都已关闭，下面可能是这样的：</p>
+<table>
+<thead>
+<tr>
+<th><strong>评估阶段</strong></th>
+<th><strong>危急</strong></th>
+<th><strong>高</strong></th>
+<th><strong>中等</strong></th>
+<th><strong>低</strong></th>
+<th><strong>信息</strong></th>
+<th><strong>闭</strong></th>
+<th><strong>总</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Web 应用程序审查</strong></td>
+<td>0</td>
+<td>0</td>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td>4</td>
+<td>14</td>
+</tr>
+<tr>
+<td><strong>AWS 配置审查</strong></td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>10</td>
+<td>2</td>
+<td>4</td>
+<td>20</td>
+</tr>
+<tr>
+<td><strong>总</strong></td>
+<td>0</td>
+<td>0</td>
+<td>9</td>
+<td>15</td>
+<td>2</td>
+<td>8</td>
+<td>34</td>
+</tr>
+</tbody></table>
+<p>以视觉方式显示此信息也可以更好一些：</p>
+<p><img src="https://raw.githubusercontent.com/B1ueD0g/Picture/main/202404231952887.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h2 id="调查结果清单-1"><a href="#调查结果清单-1" class="headerlink" title="调查结果清单"></a>调查结果清单</h2><p>报告通常有一个调查结果列表作为摘要，其中包含一些关键信息。下面是添加“状态”列后此表的外观：</p>
+<table>
+<thead>
+<tr>
+<th><strong>评估阶段</strong></th>
+<th><strong>查找 ID</strong></th>
+<th><strong>风险</strong></th>
+<th><strong>状态</strong></th>
+<th><strong>标题</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Web 应用程序评估</td>
+<td>CSK</td>
+<td>危急</td>
+<td>Closed</td>
+<td>未经身份验证的 API 端点返回医院配置</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>ZNB</td>
+<td>危急</td>
+<td>Closed</td>
+<td>为管理员帐户设置的默认密码</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>JXY</td>
+<td>危急</td>
+<td>Open</td>
+<td>通用管理员帐户</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>IIB</td>
+<td>高</td>
+<td>Closed</td>
+<td>不安全的直接对象引用</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>CJZ</td>
+<td>高</td>
+<td>Closed</td>
+<td>SQL 注入患者详细信息更新屏幕</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>XQJ</td>
+<td>高</td>
+<td>Closed</td>
+<td>无需 MFA 的管理员登录</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>GLK</td>
+<td>高</td>
+<td>Closed</td>
+<td>可公开访问的管理门户</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>NAA</td>
+<td>高</td>
+<td>Part Closed</td>
+<td>无需身份验证即可公开访问的医院门户</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>WOO</td>
+<td>中等</td>
+<td>Open</td>
+<td>租赁执行不力</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>SAU</td>
+<td>中等</td>
+<td>Open</td>
+<td>可以捕获 EMR 存储的凭证</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>IUF</td>
+<td>中等</td>
+<td>Open</td>
+<td>无速率限制</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>LAM</td>
+<td>中等</td>
+<td>Closed</td>
+<td>可猜测的管理员 URL</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>TDL</td>
+<td>高</td>
+<td>Closed</td>
+<td>未对管理员帐户强制执行 MFA</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>DWM</td>
+<td>高</td>
+<td>Closed</td>
+<td>没有强制执行密码复杂性</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>CIV</td>
+<td>高</td>
+<td>Closed</td>
+<td>未启用 Cloudwatch</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>EDE</td>
+<td>高</td>
+<td>Closed</td>
+<td>SSH 服务器公开</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>CTY</td>
+<td>高</td>
+<td>Open</td>
+<td>用于生产的单个 EC2 实例 – DoS 风险</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>FBB</td>
+<td>高</td>
+<td>Open</td>
+<td>无备份</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>PSY</td>
+<td>高</td>
+<td>Closed</td>
+<td>未启用 MFA 删除的数据库</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>ISN</td>
+<td>中等</td>
+<td>Open</td>
+<td>没有 Web 应用程序防火墙</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>DXU</td>
+<td>中等</td>
+<td>Open</td>
+<td>缺少用户组</td>
+</tr>
+</tbody></table>
+<p>这种格式使读者能够一目了然地知道哪些问题尚未得到修复。</p>
+<h1 id="发现"><a href="#发现" class="headerlink" title="发现"></a>发现</h1><p>我们已经触及了更新的发现中可能捕获的内容 - 新的证据和评论，说明更新的内容。这是整个过程的样子。</p>
+<blockquote>
+<p><strong>在论坛软件上存储跨站点脚本</strong></p>
+<p><strong>风险 - 严重</strong></p>
+<p><strong>描述</strong></p>
+<p>OmniCorp 用于协助客户支持请求的论坛软件容易受到存储的跨站点脚本的影响。此漏洞影响了论坛帖子页面上的评论部分，任何恶意注入的代码都会对访问受影响页面的任何用户运行。攻击者可以利用此漏洞破坏用户论坛会话（包括论坛版主或管理员），甚至提供虚假的登录表单，试图窃取用户的生产凭据。如果获取了用户凭据，则可能导致攻击者获得对敏感用户数据的访问权限。此漏洞的攻击复杂度非常低，因为没有防御性编码，使攻击者更容易利用;唯一的要求是用户访问受影响的论坛帖子。虽然只有该平台的用户可以利用这个问题，但鉴于互联网上的任何人都可以自行注册和使用该平台，这是没有意义的。虽然在托管论坛的 Web 服务器上安装了 Web 应用程序防火墙，但它当前并未运行。但是，即使启用了此问题，它也可能无法阻止所有利用此问题的尝试。</p>
+<p>存储的跨站点脚本是一种漏洞，Web 应用程序未对不受信任的输入执行足够的输入验证或清理，或者未对值执行足够的输出编码。其结果是，应用程序（在数据库、日志或其他系统中）提交并随后存储的恶意信息随后被反映并合并到生成的网页中。在跨站点脚本的情况下，JavaScript 被发送到服务器、存储并返回到用户的浏览器，并执行以执行各种恶意操作。</p>
+<p>利用跨站点脚本漏洞存在一系列可能性，其中一些包括：</p>
+<ul>
+<li>在浏览器会话中运行加密矿工</li>
+<li>尝试窃取经过身份验证的页面上特定于用户的会话令牌或内容</li>
+<li>注入虚假表格供用户填写，以试图窃取信息（例如，用于收集凭据的登录表格）</li>
+<li>在用户不知情的情况下在用户上下文中执行操作（例如，将恶意内容发布到论坛）</li>
+<li>显示恶意内容</li>
+</ul>
+<p>鉴于利用此漏洞的方式多种多样，此问题会严重影响任何处理敏感数据的应用程序，因为它更有可能被盗、修改或删除。</p>
+<p>以下 HTTP 请求和响应显示了 OmniCorp 论坛应用程序软件接受的基本 JavaScript 的注入。</p>
+<p><strong>请求</strong></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">POST</span> /forum/post/<span class="hljs-number">1</span>/comment HTTP/<span class="hljs-number">1</span>.<span class="hljs-number">1</span><br><span class="hljs-attribute">Host</span>: forum.example.com<br><span class="hljs-attribute">Content</span>-Type: application/x-www-form-urlencoded<br><span class="hljs-attribute">Content</span>-Length: <span class="hljs-number">68</span><br><span class="hljs-attribute">Cookie</span>: sessionid=REDACTED<br> <br><span class="hljs-attribute">postId</span>=<span class="hljs-number">42</span>&amp;comment=%<span class="hljs-number">3</span>Cscript%<span class="hljs-number">3</span>Ealert(&#x27;XSS&#x27;)%<span class="hljs-number">3</span>C%<span class="hljs-number">2</span>Fscript%<span class="hljs-number">3</span>E<br></code></pre></td></tr></table></figure>
+
+<p><strong>响应</strong></p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-meta">HTTP/1.1</span> <span class="hljs-number">200</span> OK<br><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>text/html; charset=UTF-8<br><span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">: </span>256<br></code></pre></td></tr></table></figure>
+
+<p>以下 HTTP 请求和响应显示服务器作为可在用户浏览器会话中运行的可执行 JavaScript 返回的有效负载。</p>
+<p><strong>请求</strong></p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/forum/post/1/comments</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>forum.example.com<br><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/x-www-form-urlencoded<br><span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">: </span>68<br><span class="hljs-attribute">Cookie</span><span class="hljs-punctuation">: </span>sessionid=REDACTED<br></code></pre></td></tr></table></figure>
+
+<p><strong>响应</strong></p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs xquery">HTTP/<span class="hljs-number">1.1</span> <span class="hljs-number">200</span> OK<br>Content-Type: <span class="hljs-type">text</span>/html; charset=UTF-<span class="hljs-number">8</span><br>Content-Length: <span class="hljs-number">256</span><br> <br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span></span><br><span class="language-xml"></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></span><br><span class="language-xml">  </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span></span><br><span class="language-xml">    </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;comment&quot;</span>&gt;</span>User posted: </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"><span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;XSS&#x27;</span>)</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><span class="language-xml"></span><br><span class="language-xml">  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><span class="language-xml"></span><br><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span><span class="language-xml"></span><br><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+
+<p>下图显示了正在执行的有效负载：</p>
+<p><img src="https://raw.githubusercontent.com/B1ueD0g/Picture/main/202404231958163.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>正在执行的 Omnicorp 存储的跨站点脚本</p>
+<p>创建概念验证 JavaScript 有效负载以生成以下 OmniCorp 登录表单。这将显示在请求的论坛帖子的顶部，以提示输入用户的凭据。提交后，用户的凭据将被发送到攻击者控制的服务器，然后帖子将变得可见。</p>
+<p><img src="https://raw.githubusercontent.com/B1ueD0g/Picture/main/202404231952839.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>假 OmniCorp 登录屏幕</p>
+<p>可以在附录第 5.2 节中找到虚假登录概念证明 HTML 和 JavaScript 有效负载的完整副本，以及使用的 HTTP 请求和响应。</p>
+<p><strong>修复验证说明 （2024-03-10 LR）</strong></p>
+<p>受影响的参数既受到原始恶意负载的影响，也受到许多其他有效负载的影响。这是为了确保没有恶意 JavaScript 从 Web 应用程序返回并在浏览器中执行的可能性。Web 应用程序对用户提供的内容执行了彻底的输出编码，然后返回并在 Web 应用程序页面中使用它。由于这些原因，此发现已被标记为已关闭。</p>
+<p>来自服务器的以下请求和响应显示了对恶意负载执行 HTML 编码的 Web 应用程序：</p>
+<p><strong>请求</strong></p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/forum/post/comment</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>forum.example.com<br><span class="hljs-attribute">Cookie</span><span class="hljs-punctuation">: </span>session=dn320487ty30232367<br><br><span class="language-mel"></span><br><span class="language-mel">comment=%3Cscript%3Ealert(<span class="hljs-string">&#x27;XSS&#x27;</span>)%3C%2Fscript%3E</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>响应</strong></p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-meta">HTTP/1.1</span> <span class="hljs-number">200</span> OK<br><br><span class="language-xml">SNIP</span><br><span class="language-xml"></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;comment&quot;</span>&gt;</span>User posted: <span class="hljs-symbol">&amp;lt;</span>script<span class="hljs-symbol">&amp;gt;</span>alert(<span class="hljs-symbol">&amp;apos;</span>XSS<span class="hljs-symbol">&amp;apos;</span>)<span class="hljs-symbol">&amp;lt;</span>/script<span class="hljs-symbol">&amp;gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<p>在这里，我们创建了一个附加到发现之外的部分（尽管它可以放在发现的其他位置，也许在描述的末尾）。该部分的名称反映了其作为原始报告的更新目的，并附有执行更新的日期和一些首字母缩写。提供了为检查结果是否已修复而执行的操作的摘要，并包括显示服务器更新响应的证据。</p>
+<p>除上述内容外，结果本身也可能包含结果的状态（如果它们是关闭的还是打开的等）。此时也应根据特定问题的修复验证结果进行更新。</p>
+<h1 id="范围"><a href="#范围" class="headerlink" title="范围"></a>范围</h1><p>修复验证通常是原始范围之外的一项工作。因此，这意味着应使用有关修复验证的信息更新范围部分。</p>
+<p>原始范围可以附加类似于以下内容的内容：</p>
+<blockquote>
+<p><strong>修复验证 - 2024-03-10 LR</strong></p>
+<p>OmniCorp 已联系 ogSec，以确认本报告文件中的一些发现是否已得到适当补救。OmniCorp要求审查以下调查结果：</p>
+<p><strong>Web 应用程序评估</strong></p>
+<ul>
+<li>CSK - 未经身份验证的 API 端点返回医院配置</li>
+<li>ZNB - 为管理员帐户设置的默认密码</li>
+<li>JXY - 通用管理员帐户</li>
+<li>IIB - 不安全的直接对象引用</li>
+<li>CJZ - SQL 注入患者详细信息更新屏幕</li>
+<li>GLK - 可公开访问的管理门户</li>
+<li>NAA - 无需身份验证即可公开访问的医院门户</li>
+</ul>
+<p><strong>AWS 配置审查</strong></p>
+<ul>
+<li>DWM - 不强制执行密码复杂性</li>
+<li>CIV - 未启用 Cloudwatch</li>
+<li>EDE - SSH 服务器公开</li>
+<li>CTY - 用于生产的单个 EC2 实例 – DoS 风险</li>
+<li>FBB - 无备份</li>
+<li>PSY - 未启用 MFA 删除的数据库</li>
+</ul>
+<p>应该注意的是，与原始评估一样，Web 应用程序评估和 AWS 配置审查都使用了相同的环境：</p>
+<p><strong>Web 应用程序评估</strong></p>
+<p>审查的 Web 应用程序：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://pppp.dddddd.dddddd/test">https://pppp.dddddd.dddddd/test</a></li>
+<li><a target="_blank" rel="noopener" href="https://cccc.dddddd.dddddd/test">https://cccc.dddddd.dddddd/test</a></li>
+</ul>
+<p><strong>AWS 配置审查</strong></p>
+<p>已审核的 AWS 账户：</p>
+<ul>
+<li>AKIAIOSFODNN7EXAMPLE</li>
+<li>AKIAIOSFODNN7EXAMPLE2</li>
+</ul>
+</blockquote>
+<hr>
+<p>在这里，原始工作范围附加了一个附加部分（适当命名和注明日期），表明执行的补救验证工作。这包括要再次审查的调查结果列表，以及有关在修复验证过程中使用了哪些 Web 应用程序和 AWS 账户的一些说明。捕获这些信息非常重要，以确保明确评估的确切内容;如果您要处理具有许多环境的客户端，或者如果没有此信息，范围可能会令人困惑，这可能很有用。</p>
+<p>在关于作用域的课程中，我们展示了这些信息可以以表格格式捕获。我的建议是，如果你使用这种风格，你只需复制整个部分并将其放在原始部分的下面。以下是这个新版本的样子：</p>
+<p><strong>修复验证 - 2024-03-10 LR</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>评估开始</strong></th>
+<th>01&#x2F;01&#x2F;2024</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>评估结束</strong></td>
+<td>15&#x2F;01&#x2F;2024</td>
+</tr>
+<tr>
+<td><strong>评估小组</strong></td>
+<td>卢克·罗杰森</td>
+</tr>
+<tr>
+<td><strong>评估名称</strong></td>
+<td>OGPatientBooking 修复验证</td>
+</tr>
+<tr>
+<td><strong>工作阶段</strong></td>
+<td>修复验证（Web 应用程序评估和 AWS 配置审核结果）</td>
+</tr>
+<tr>
+<td><strong>范围</strong></td>
+<td>AWS 账户：AKIAIOSFODNN7EXAMPLE、AKIAIOSFODNN7EXAMPLE2 要审查的结果：  Web 应用程序评估  - CSK - 未经身份验证的 API 终端节点返回医院配置 - ZNB - 为管理员帐户 设置的默认密码 - JXY - 通用管理员帐户 - IIB - 不安全的直接对象参考 - CJZ - SQL 注入患者详细信息更新屏幕 - GLK - 可公开访问的管理门户 - NAA - 无需身份验证  即可公开访问的医院门户 AWS 配置审查  - DWM - 不强制执行 密码复杂性 - CIV - 未启用 Cloudwatch - EDE - SSH 服务器公开 - CTY - 用于生产的单个 EC2 实例 – DoS 风险 - FBB - 无备份 - PSY - 未启用 MFA 删除的数据库</td>
+</tr>
+<tr>
+<td>测试环境</td>
+<td>在生产环境中测试医院帐户 （test-hospital-2）</td>
+</tr>
+</tbody></table>
+<p>这看起来确实有点臃肿，这就是为什么我更喜欢使用散文格式来确定信息范围。我怀疑有可能让它看起来更干净一些，如果他们希望使用这种格式，我会把它留给读者来弄清楚。</p>
+<h1 id="摘要-1"><a href="#摘要-1" class="headerlink" title="摘要"></a>摘要</h1><p>同样，总结评估结果是有意义的，总结修复验证的结果以突出安全态势方面的变化也是有意义的。</p>
+<p>最合乎逻辑的地方是在执行摘要末尾添加一个小节。让我们更新 OGPatientBooking 解决方案评估的执行摘要。</p>
+<p>提醒一下，以下是执行摘要的内容：</p>
+<blockquote>
+<p>OGPatientBooking 解决方案是一个 SaaS（软件即服务）平台，被英国十几家大型医院使用。它的主要目的是作为患者在医院进行自我检查的单一场所，从而降低对接待人员的需求或腾出时间从事其他任务。该平台每天通过放置在医院入口处的终端预订大约 25,000 名独特的患者（每月约 ~750,000 名）。大多数使用该平台的医院也在使用“患者通信”模块，该模块允许患者查看测试结果或医生的消息。由于在英国大型医院的使用以及访问患者数据的能力，该解决方案可能可以访问大约 1000 万人的数据。</p>
+<p>由于该平台在医院运营中至关重要，因此平台的可用性和完整性以及所涉及的患者数据的机密性至关重要。如果这一基本系统不可用，医院可能会受到严重影响。更关键的是，必须不惜一切代价保护从此解决方案使用和访问的数据，因为它包含个人健康信息 （PHI）。从隐私的角度来看，对这些数据的任何泄露或修改都可能意义重大，在最坏的情况下（例如，攻击者已获得对医院 EMR 解决方案的访问权限并更改了患者的药物或剂量），它可能导致生命损失。</p>
+<p>虽然该应用程序展示了安全 Web 应用程序安全实践的领域，以及在面向外部的 Web 应用程序部署方面的许多安全配置，但许多具体发现和架构问题意味着患者数据面临重大泄露风险。</p>
+<p>由于登记过程的工作方式，到达医院的患者需要通过触摸屏验证他们是谁，并遵循多步骤流程使用他们的出生日期来验证自己。尝试使用触摸屏猜测出生日期是可能的，但对于攻击者来说可能是不可行的。然而，在测试过程中，人们注意到所有医院的签到页面都可以通过互联网访问，并且很容易被发现。这意味着可以创建自动化工具，可以请求所有可能的出生日期（过去 100 年）以返回当天预约的患者列表。一旦攻击者处于此位置，他们就能够使用从患者预约中返回的详细信息来访问测试结果、医生的消息或查看或更新他们的个人信息（电子邮件地址、电话号码和医生手术）。发现医院的门户页面只需要猜测一个 URL，这对攻击者来说很容易做到。随后对签到过程的利用也将非常容易，因为有一些工具可以帮助进行此类攻击。</p>
+<p>一旦攻击者处于上述位置，他们将能够利用平台中的其他漏洞，从而访问平台托管的所有医院的所有预约数据。读取、修改或删除这些记录是可能的，并且由于用于托管平台的单个数据库中不同医院数据之间的隔离极其有限。攻击者不仅可以从所有这些患者中提取个人信息，还可以通过删除所有记录来有效地删除所有预约。这些漏洞很容易被经验丰富的攻击者发现，并且假设他们成功获得了对一名患者预约的访问权限，则攻击发生的可能性很大。</p>
+<p>就像医院的签到页面可以公开访问一样，每家医院的管理面板也可以访问。一旦发现医院的签到页面位置，攻击者发现管理页面就很容易了。更糟糕的是，通用管理员帐户的使用正在使用中，对于几家医院来说，它没有从默认值（在公共文档中公开提供）更改。使用此帐户访问此区域将允许攻击者更改许多设置，这些设置可能导致给定医院的系统脱机。</p>
+<p>不仅平台的前端面临重大风险，而且解决方案的部署以及AWS内部缺乏强化意味着攻击者有可能获得对AWS的访问权限。如果攻击者能够猜测或获取 AWS 管理员的用户名和密码，他们将完全控制整个解决方案，并能够访问、修改或删除平台内的所有数据。如果实施了多因素身份验证，这将是可以预防的。</p>
+<p>此外，攻击者还可以访问医院 EMR 系统的凭证材料（安全存储，但所有 AWS 用户都可以访问），从而大大增加攻击者可以访问的数据类型。例如，这可能是大约1000万患者的病史。对这些数据的任何泄露都可能违反《2018年数据保护法》或涵盖个人健康信息的英国《通用数据保护条例》（GDPR）。违反此数据可能会导致对 OGPatientBooking 的严厉处罚。</p>
+<p>虽然架构审查不在此评估范围内，但有人指出，该解决方案在 AWS 中没有足够的高可用性配置，也没有任何有效的备份。如果发生违规，并且应用程序受到拒绝服务条件的影响，这将产生重大影响。例如，如前所述，如果删除了数据库内容，则目前没有已知的恢复数据的方法。此外，如果在单个 EC2 实例上运行的应用程序受到拒绝服务情况的影响，则无法轻松扩展负载。这两个示例都表明，具有足够资源或访问权限的攻击者很容易影响此关键系统的可用性。</p>
+<p>由于代码审查不在此评估范围内，因此无法确定 Web 应用程序本身的日志记录实现，但是，AWS 环境的日志记录和监控配置似乎处于默认状态。这意味着无法查看管理员已对环境进行身份验证并进行更改的 AWS 环境的任何审计。</p>
+<p>根据确定的实施和架构问题，该平台面临潜在漏洞的重大风险，允许攻击者访问敏感的患者数据，并使其容易受到拒绝服务条件的影响。数据泄露和未经授权访问应用程序配置面板的可能性很高，这主要是由于易于获取可公开访问的页面的 URL。攻击者利用该系统所需的后续步骤很少，对应用程序的安全性构成严重威胁。必须立即采取行动，以调查和修复应用程序的入口点，并确认是否发生了任何历史患者数据泄露事件。</p>
+</blockquote>
+<p>假设在修复验证后，这是所有问题的最新状态：</p>
+<table>
+<thead>
+<tr>
+<th><strong>评估阶段</strong></th>
+<th><strong>查找 ID</strong></th>
+<th><strong>风险</strong></th>
+<th><strong>状态</strong></th>
+<th><strong>标题</strong></th>
+<th><strong>笔记</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Web 应用程序评估</td>
+<td>CSK</td>
+<td>危急</td>
+<td>Closed</td>
+<td>未经身份验证的 API 端点返回医院配置</td>
+<td>返回特定 ID 的管理页面和门户页面 - 链接到 IDOR 错误</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>ZNB</td>
+<td>危急</td>
+<td>Closed</td>
+<td>为管理员帐户设置的默认密码</td>
+<td>默认密码已更新</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>JXY</td>
+<td>危急</td>
+<td>Open</td>
+<td>通用管理员帐户</td>
+<td>通用帐户仍然存在</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>IIB</td>
+<td>高</td>
+<td>Closed</td>
+<td>不安全的直接对象引用</td>
+<td>与攻击者可能在请求中更改整数 ID 以查找其他医院的配置的问题有关。不再可能</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>CJZ</td>
+<td>高</td>
+<td>Closed</td>
+<td>SQL 注入患者详细信息更新屏幕</td>
+<td>漏洞修复</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>XQJ</td>
+<td>高</td>
+<td>Closed</td>
+<td>无需 MFA 的管理员登录</td>
+<td>已实施 MFA</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>GLK</td>
+<td>高</td>
+<td>Closed</td>
+<td>可公开访问的管理门户</td>
+<td>防火墙到医院网络</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>NAA</td>
+<td>高</td>
+<td>Part Closed</td>
+<td>无需身份验证即可公开访问的医院门户</td>
+<td>防火墙到医院网络</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>WOO</td>
+<td>中等</td>
+<td>Open</td>
+<td>租赁执行不力</td>
+<td>超出范围</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>SAU</td>
+<td>中等</td>
+<td>Open</td>
+<td>可以捕获 EMR 存储的凭证</td>
+<td>超出范围</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>IUF</td>
+<td>中等</td>
+<td>Open</td>
+<td>无速率限制</td>
+<td>超出范围</td>
+</tr>
+<tr>
+<td>Web 应用程序评估</td>
+<td>LAM</td>
+<td>中等</td>
+<td>Open</td>
+<td>可猜测的管理员 URL</td>
+<td>超出范围</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>TDL</td>
+<td>高</td>
+<td>Closed</td>
+<td>未对管理员帐户强制执行 MFA</td>
+<td>启用并适当配置</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>DWM</td>
+<td>高</td>
+<td>Closed</td>
+<td>没有强制执行密码复杂性</td>
+<td>启用并适当配置</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>CIV</td>
+<td>高</td>
+<td>Closed</td>
+<td>未启用 Cloudwatch</td>
+<td>启用并适当配置</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>EDE</td>
+<td>高</td>
+<td>Closed</td>
+<td>SSH 服务器公开</td>
+<td>防火墙到医院网络</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>CTY</td>
+<td>高</td>
+<td>Open</td>
+<td>用于生产的单个 EC2 实例 – DoS 风险</td>
+<td>仍然使用单个实例</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>FBB</td>
+<td>高</td>
+<td>Open</td>
+<td>无备份</td>
+<td>未进行任何备份</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>PSY</td>
+<td>高</td>
+<td>Closed</td>
+<td>未启用 MFA 删除的数据库</td>
+<td>在所有数据库上启用</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>ISN</td>
+<td>中等</td>
+<td>Open</td>
+<td>没有 Web 应用程序防火墙</td>
+<td>超出范围</td>
+</tr>
+<tr>
+<td>AWS 配置审查</td>
+<td>DXU</td>
+<td>中等</td>
+<td>Open</td>
+<td>缺少用户组</td>
+<td>超出范围</td>
+</tr>
+</tbody></table>
+<p>基于上述内容，以下是我们可能附加到执行摘要中的内容：</p>
+<blockquote>
+<p><strong>修复验证 - 2024-03-10 LR</strong></p>
+<p>一些修复和缓解的结果显著降低了 OGPatientBooking 应用程序及其底层基础结构中发现的结果的攻击面和可利用性。应该注意的是，在实施和不实施基于医院的防火墙的情况下，都进行了补救验证工作，以确认新实施的防火墙功能是否有效，同时也审查了只有在网络访问可能的情况下才能访问的结果。</p>
+<p>最初，互联网上的攻击者可以访问所有医院门户登录屏幕（将在医院内显示和使用的门户），但是，由于医院 IP 地址 （NAA） 的防火墙，这些屏幕现在无法访问。这项措施大大减轻了基于互联网的攻击，但门户仍可能受到医院网络的攻击。医院网络内的特定防火墙可能会进一步降低这种风险，但不在原始评估或部分补救验证活动的范围内。这种防火墙也适用于每家医院的管理门户 （GLK），这意味着攻击者在尝试身份验证之前需要访问医院网络。虽然所有医院的通用帐户密码都已更改 （ZNB），但帐户本身仍然存在 （JXY）。还应该注意的是，现在对所有管理员帐户 （XQJ） 强制执行 MFA，这意味着即使攻击者可以尝试对通用帐户进行密码猜测攻击，如果没有 OTP（一次性密码），他们也无法访问它。</p>
+<p>还修复了披露医院配置及其门户页面的其他问题（CSK、IIB）。这限制了攻击者发现医院及其各自管理面板的门户页面的能力，尽管现在只有在这些发现最初被利用并且应用程序中的防火墙配置配置错误的情况下才有可能这样做。</p>
+<p>SQL 注入漏洞已修复，无法再访问所有患者数据 （CJZ）。</p>
+<p>从 AWS 的角度来看，会使 AWS 管理员的账户面临风险的漏洞已得到解决。密码复杂性 （DWM） 和 AWS 账户 （TDL） 缺少 MFA 的问题已得到修复，从而有效地保护了所有账户。此外，提供底层基础设施访问权限的 SSH 服务器现在只能从 OmniCorp 地址 （EDE） 访问。最后，启用并适当配置了 AWS 中的 CloudWatch，这将有助于分析日志以发现针对平台 （CIV） 的攻击。最后，删除解决方案中使用的所有数据库需要删除 OTP（一次性密码）（PSY），这有助于防止恶意和意外删除。</p>
+<p>应该指出的是，虽然原始报告中的所有高危漏洞都是针对补救的，但有几个问题仍然悬而未决。所有医院门户都保留了原始通用管理员账户 （JXY），没有对关键 AWS 基础设施 （FBB） 执行备份，并且所有医院 （CTY） 都使用单个 EC2 实例。虽然现在确实减轻了可能使应用程序不堪重负以导致拒绝服务的攻击的可能性，但缺少备份和使用单个 EC2 实例的重要性构成了重大的操作安全问题。因此，这些发现的风险评级没有改变。</p>
+<p>总而言之，平台的风险已大大降低，不再成为基于互联网的攻击者轻而易举的目标。如前所述，仍然可能存在从医院网络内部攻击门户本身的途径，这就是为什么围绕缺乏对门户的身份验证的问题仅被视为“部分关闭”（NAA）。如果要实施某种形式的身份验证（例如，管理员必须在终端上登录到后端解决方案才能使用），这将消除来自医院网络内部对门户的攻击，因为现在需要身份验证才能使用它。</p>
+<p>有关所有问题的最新状态，请参阅第X.X节“调查结果概述”。</p>
+</blockquote>
+<hr>
+<p>编写上述内容可能有点困难，但如果完成到足够详细的水平，它对客户来说非常有价值。</p>
+<p>让我们分解一下编写本文所涉及的步骤：</p>
+<ol>
+<li>正如本课开头所述，请确保您已仔细阅读并理解原始报告、其调查结果和执行摘要。原始报告越详尽，编写本节就越容易。</li>
+<li>执行修复验证工作。一次解决一个问题，直到完成。</li>
+<li>查看其状态发生变化（例如“打开”&gt;“已关闭”）的调查结果，并分析其状态是否为以下情况：<ol>
+<li>减少&#x2F;更改了攻击面</li>
+<li>预防&#x2F;限制其他发现</li>
+</ol>
+</li>
+<li>按工作阶段、在攻击链中的位置、问题类型或其他可能更容易总结的内容，将发现归类并组合在一起。</li>
+<li>有了这些说明，请按以下格式生成更新：<ol>
+<li>风险、影响和攻击面的主要变化的标题介绍</li>
+<li>浏览分组的笔记（如果可以分组），并提供随时间推移已修复和更改的内容的摘要。<strong>注意</strong>：我认为在不深入研究具体修复内容的情况下编写本节可能非常困难。这与原始摘要略有不同。我认为这是可以的，但是通过提供对特定发现的交叉引用（如您将在上面看到的那样），可以稍微避免过多地了解技术信息。</li>
+</ol>
+</li>
+<li>反思作为修复验证工作一部分的任何剩余未解决的问题。他们的评级是否因为其他问题而改变？您能在这里提供任何额外的背景信息来帮助客户吗？</li>
+<li>总结摘要，并反思在潜在影响、风险和攻击面及其适用问题方面看到的主要变化。反思应该完成哪些工作以消除任何其他重大风险。</li>
+<li>将读者指向“调查结果概述”部分，以查看问题及其状态的最新细分。</li>
+</ol>
+<p>这里要提到的一个警告是，如果自原始评估以来已经有很长一段时间，或者其他功能&#x2F;服务&#x2F;事物已添加到之前测试的内容中，则可能值得一提。显然，任何未经审查的内容都可能存在漏洞，这些漏洞会使本节中执行的任何分析无效。可以将以下内容添加到此部分、范围部分、警告部分或报告的保修通知部分的某个位置：</p>
+<blockquote>
+<p>应该指出的是，对影响系统的风险变化的任何分析都是基于本文件中概述的原始调查结果。随着环境、网络或其他解决方案随时间的变化，可能会引入新的漏洞，而这些漏洞不会出现在本报告中。因此，分析仅考虑以前发现的问题。</p>
+</blockquote>
+<h1 id="建议-1"><a href="#建议-1" class="headerlink" title="建议"></a>建议</h1><p>针对 OGPatientBooking 应用程序的建议分为两部分。一个是紧随执行摘要之后的“下一步”部分，另一个是单独的部分，用于介绍所有战略建议。虽然我认为在执行摘要更新文本中捕获适用的建议注释更为明智，但您也可以提供这些部分之一的更新。如果这样做，请考虑在存在重大未解决的风险或需要根据已修复的内容采取新的修复方向时添加简明的评论。</p>
+<p>如前所述，我们已经在执行摘要中谈到了一些所需的补救措施。这是为了确保最终将某种形式的身份验证添加到门户应用程序中。这将防止任何具有网络级别访问权限的人滥用门户。此外，由于缺乏在 AWS 中配置的备份以及使用单个 EC2 实例来托管平台，之前还提到了有关运营风险的评论。</p>
+<p>让我们围绕这一点写一些话，以附加到战略建议部分。但首先，这里是推荐部分的快速回顾。</p>
+<blockquote>
+<p><strong>立即采取后续步骤</strong></p>
+<p>根据确定的实施和架构问题，该平台面临潜在漏洞的重大风险，允许攻击者访问敏感的患者数据，并使其容易受到拒绝服务条件的影响。数据泄露和未经授权访问应用程序配置面板的可能性很高，这主要是由于易于获取可公开访问的页面的 URL。攻击者利用该系统所需的后续步骤很少，对应用程序的安全性构成严重威胁。必须立即采取行动，以调查和修复应用程序的入口点，并确认是否发生了任何历史患者数据泄露事件。</p>
+<p>建议立即执行以下步骤，以显著减少解决方案的攻击面，并防止对基础结构的重大攻击：</p>
+<ul>
+<li>与医院合作实施防火墙规则，以锁定其签到门户，使其只能从其网络访问。</li>
+<li>管理面板也应执行相同的操作。</li>
+<li>与医院合作，确保更改其管理员密码。</li>
+<li>查看 Web 应用程序和 AWS 日志以确定是否发生了违规行为。</li>
+<li>确保在此过程中识别并纠正日志记录和监视中的任何差距。</li>
+<li>对所有 AWS 用户实施多重验证。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>战略建议</strong></p>
+<p>OGPatentBooking 应审查此报告的调查结果和摘要，并计划根据漏洞带来的风险和影响进行修复。</p>
+<p>应首先修复显著增加解决方案攻击面的关键漏洞。应防止 Internet 上的任何人同时访问医院门户签到页面和相应的管理页面：只能从他们预期通信的医院网络访问这些页面。</p>
+<p>与医院合作，确保更改默认管理员帐户密码，并鼓励为每个管理者创建用户特定帐户，而不是使用通用帐户。还应制定弃用默认帐户的计划，并在安装过程中创建命名帐户。</p>
+<p>确保对所有 AWS 用户强制实施并启用双因素身份验证，并强化用户的密码复杂性要求。应启用 AWS Config 日志记录并将其馈送到 CloudWatch。来自资产中其他组件的日志记录也应馈送到 CloudWatch。启用所有相关组件的备份。</p>
+<p>查看 Web 应用程序和 AWS 环境的所有可用日志，以确认是否发生了未经授权的数据访问。如果不存在可以显示此证据的日志，请确保将其作为修复本报告中问题的一部分实施。</p>
+<p>请注意，您可以联系 ogSec 以获得任何帮助，以确定与所述漏洞相关的当前或过去的违规行为，以及帮助识别代码级别或 AWS 中可能存在的日志记录和监控差距。</p>
+<p>对登记门户页面实施身份验证（即医院内的触摸屏在使用前需要登录应用程序）。强制实施严格的密码复杂性要求和潜在的多因素身份验证。此外，为管理员用户开发多重身份验证，并在应用程序中强制执行此身份验证的方法。</p>
+<p>请考虑在解决方案的管理面板中实现受信任网络列表，以便管理员能够自行添加防火墙配置。</p>
+<p>查看解决方案中的租赁模型，并可能将医院彼此分开，这比目前使用简单的数据库列键实现的要多。最好的隔离方式可能是将医院分离到自己的 AWS 账户中，并拥有自己的数据库和其他组件。</p>
+<p>同样，查看整个解决方案的架构，看看是否可以利用其他 AWS 服务来使解决方案有效扩展并消除任何单点故障。</p>
+<p>考虑对 AWS 环境执行定期扫描，以发现潜在的错误配置和进一步强化的机会。</p>
+<p>如果尚未执行此操作，请执行静态代码分析，以检查可能存在的常见实现级别安全问题，并确保它们未提交到生产代码中。</p>
+<p>请考虑联系解决方案的代码辅助 Web 应用程序评估，以检查在评估时间内可能无法发现的进一步实现、业务逻辑或配置问题。</p>
+</blockquote>
+<p>鉴于执行摘要修复验证部分中概述的内容，有关向门户页面添加身份验证的其他注释被认为是重复的，但是，假设我们没有在那里介绍它。下面可能是这样的：</p>
+<blockquote>
+<p>虽然平台中的大多数重大风险已通过防火墙进行修复或缓解，但应执行进一步的工作来保护门户页面。应添加身份验证，以确保任何具有网络级别访问权限的人都无法滥用患者身份验证过程，阻止访问属于患者的约会和其他数据。</p>
+<p>仍应考虑删除门户应用程序中的单点故障（就用于平台的单个 EC2 主机而言），以及启用对适用组件的备份。</p>
+</blockquote>
+<p>我在这里的过程是：</p>
+<ul>
+<li>非常简要地回顾一下为降低整体风险而采取的措施</li>
+<li>涵盖在短期内应该执行哪些重要工作以降低平台的主要风险</li>
+</ul>
+<p>就这么简单。任何长期战略建议都应在原来的建议中提及。</p>
+<h1 id="变更控制"><a href="#变更控制" class="headerlink" title="变更控制"></a>变更控制</h1><p>由于这是上一个报告的更新版本，因此请确保更新更改控制部分，以包含草稿、审阅和发布给客户端以进行修复验证过程所需的行。</p>
+<p>下面是这可能是什么样子的：</p>
+<table>
+<thead>
+<tr>
+<th><strong>版本</strong></th>
+<th><strong>日期</strong></th>
+<th><strong>作者</strong></th>
+<th><strong>变更摘要</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0.1</td>
+<td>14&#x2F;01&#x2F;2024</td>
+<td>卢克·罗杰森</td>
+<td>QA流程的内部草案</td>
+</tr>
+<tr>
+<td>0.2</td>
+<td>15&#x2F;01&#x2F;2024</td>
+<td>丹尼尔·詹宁斯</td>
+<td>内部同行评审</td>
+</tr>
+<tr>
+<td>1.0</td>
+<td>15&#x2F;01&#x2F;2024</td>
+<td>卢克·罗杰森</td>
+<td>发布给客户端</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>25&#x2F;03&#x2F;2024</td>
+<td>卢克·罗杰森</td>
+<td>QA 流程的内部补救验证草案</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>26&#x2F;03&#x2F;2024</td>
+<td>丹尼尔·詹宁斯</td>
+<td>内部同行评审</td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>27&#x2F;03&#x2F;2024</td>
+<td>卢克·罗杰森</td>
+<td>发布给客户端</td>
+</tr>
+</tbody></table>
+<h1 id="其他要更新的部分"><a href="#其他要更新的部分" class="headerlink" title="其他要更新的部分"></a>其他要更新的部分</h1><p>作为修复验证过程的一部分，我们介绍了应在报告中更新的核心部分。但是，可能还有其他部分可以更新，要么是因为您的报告结构与我在本课程中概述的内容不同，要么是因为客户特别要求您更新其他部分。没关系。我的建议是，在附加带有补救验证说明（例如，适当注明日期和草签）的部分时，确保应用一致性。</p>
+<hr>
+<p>接下来，让我们看看可以使用哪些其他文档格式来捕获这些结果和更新。</p>
+<h1 id="6-修复验证-跟踪结果-其他文档"><a href="#6-修复验证-跟踪结果-其他文档" class="headerlink" title="6-修复验证 - 跟踪结果 - 其他文档"></a>6-修复验证 - 跟踪结果 - 其他文档</h1><p>除了更新的报告文档之外，还有其他一些方法可以捕获修复验证的结果。</p>
+<p>以下是一些常见示例：</p>
+<ul>
+<li>原始报告文件中的新附录</li>
+<li>包含调查结果列表及其状态的结果电子表格</li>
+<li>包含修复验证结果的单独新文档</li>
+</ul>
+<p>让我们浏览一下这些文档类型，并考虑其中可能包含的内容。</p>
+<h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><p>补救验证的结果可能存储在报告的附录部分，其中记录了所审查的每个结果及其状态、评论和证据。这不是一个可怕的方法，因为它清楚地将原始工作与补救验证工作分开。</p>
+<p>如果你沿着这条路走下去，我建议该部分的结构有点类似于精简的报告结构。下面是可能存在的部分：</p>
+<ul>
+<li>范围<ul>
+<li>涵盖哪些评估阶段</li>
+<li>涵盖哪些环境</li>
+<li>有待审查的调查结果清单</li>
+</ul>
+</li>
+<li>风险更新（之前看到的执行摘要更新）</li>
+<li>建议更新（如果需要，之前看到的建议更新）</li>
+<li>调查结果概述<ul>
+<li>理货表更新</li>
+<li>调查结果清单及其现状</li>
+</ul>
+</li>
+<li>发现<ul>
+<li>每个发现的部分，包括<ul>
+<li>评论</li>
+</ul>
+</li>
+<li>证据</li>
+</ul>
+</li>
+</ul>
+<p>在构建此内容时，请利用对原始部分和发现的交叉引用，以使读者更容易。如果不是很明显，这就是这种方法的缺点。虽然将所有修复验证工作集中在一个地方是件好事，但如果读者需要刷新对原始文档中某些内容的记忆，他们可能会在文档中跳来跳去。如果文档的更新与原始内容内联完成，则问题不大。</p>
+<h1 id="单独的报告文件"><a href="#单独的报告文件" class="headerlink" title="单独的报告文件"></a>单独的报告文件</h1><p>有时，修复验证过程的结果会在单独的文档中提供。不要与结果电子表格混淆（我们稍后会讨论这一点），而是一个独立的报告文档，其唯一要求是显示补救验证的结果。</p>
+<p>当我看到这些文件被使用时，它们通常看起来与特定组织的“正常”报告结构相同。所有部分都按正常方式填写，但提到评估是为了补救验证。</p>
+<p>就我个人而言，我认为标记原始文档比创建单独的新文档要好。对于单独的文档，客户可能需要打开原始文本才能理解结果，如果他们不这样做，则由于缺少通常靠近更新文本的原始文本，可能会发生一些混淆。</p>
+<p>至关重要的是，如果采用这种方法来确保对以前的报告进行适当的反思，并且有一个附录部分来包含以前遇到的发现的列表，无论它们是否在此补救验证阶段进行了审查。这是因为您不希望使用或解释报告为“这就是找到的所有内容，这些是它们的当前状态”。这将具有难以置信的误导性，并且可能无法反映所审查内容的安全性的现实。在评估范围内引用原始文档文件名也是一种很好的做法。</p>
+<p>我建议不要采用这种方法，但这取决于你和你的组织。</p>
+<h1 id="电子表格"><a href="#电子表格" class="headerlink" title="电子表格"></a>电子表格</h1><p>我见过许多案例，客户可能仅仅想要一份包含结果的电子表格（这可能是我们在课程其他部分讨论过的发现电子表格的修改版本）。确保非常清楚地表明每个问题是否已得到修复，例如设置一个明显的列来标注当前状态：</p>
+<ul>
+<li>开放（或未修复）</li>
+<li>部分关闭（或部分修复）</li>
+<li>关闭（或已修复）</li>
+<li>误报</li>
+</ul>
+<p>此外，我发现使用一些淡色调来标注行的当前状态在视觉上有帮助，例如：</p>
+<ul>
+<li>开放 — 红色</li>
+<li>部分关闭 — 橙色</li>
+<li>关闭 — 绿色</li>
+<li>误报 — 绿色</li>
+</ul>
+<p>如果您使用颜色，在颜色中包含键或图例也可能是一个好主意。</p>
+<p>如果您只提供电子表格，则通常没有合适的位置来放置补救验证的证据。<strong>您可以</strong>尝试将屏幕截图、HTTP 响应或命令行输出粘贴到电子表格中，但它看起来并不好。但是，如果客户只想要电子表格，我的建议是在内部为您创建一个文档来捕获证据并将其与此电子表格一起存储。最好在执行工作时将其放在一起，而不是在客户要求的情况下在事后回来将其放在一起。这可以采用与前面提到的附录相同的格式，或者只是一份审查结果、评论和证据的清单。</p>
+<hr>
+<p>让我们用课程摘要来结束补救验证。</p>
+<h1 id="7-修复验证-课程总结"><a href="#7-修复验证-课程总结" class="headerlink" title="7-修复验证 - 课程总结"></a>7-修复验证 - 课程总结</h1><p>在本课中，我们介绍了修复验证过程（也称为重新测试）的核心概念。</p>
+<p>我们谈到了为工作做好适当准备的重要性，既要确保我们拥有能够毫无问题地开始评估所需的一切，也要熟悉以前的报告材料。确保我们为评估做好准备，不仅可以使其更有可能按时完成（并且有更多时间进行测试），而且任何验证审查反馈都将是体贴的，并包含有用的背景信息，说明在结果确定后发生了哪些变化。</p>
+<p>我们介绍了当对调查结果的审查表明开放风险仍然存在时，应如何谨慎行事——当风险仍然存在时，不应关闭它们。如果风险发生了变化，则应进行调整，而不是关闭调查结果。可以使用其他结果状态，但我的建议是谨慎使用它们，并且仅在有意义时才使用它们。要么有风险，要么没有。当发现已修复一半时，风险很可能只是发生了变化，但发现仍然存在。</p>
+<p>我们仔细研究了各种问题类型的证据应该收集的内容，并强调了保留证据的重要性，即使我们的客户对看到它不感兴趣（他们只是想知道调查结果是否得到补救）。证据是发现已关闭或仍处于关闭状态的证据，出于同样的原因，我们应该在评估中记录各种工具的测试输出，补救验证工作也是如此。</p>
+<p>收集到证据后，我们浏览了可以在报告文档中更新的几个关键部分，并查看了这些更新可能是什么样子的一些示例。除了更新的报告文档之外，我们还介绍了向客户提供此过程结果的几种不同方式。虽然我们可以为客户提供简单的“通过&#x2F;失败”结果，但提供结果评论以帮助客户修复问题会更有帮助。此外，对执行摘要等部分提供有用的更新（虽然编写起来可能很痛苦）可以使客户更好地了解其最新的安全状况，并修复许多已知风险，从而对客户有益。</p>
+<h1 id="8-修复验证-练习"><a href="#8-修复验证-练习" class="headerlink" title="8-修复验证 - 练习"></a>8-修复验证 - 练习</h1><p>在上一课中，我们介绍了如何准备补救验证，如何适当地捕获证据，以及如何最好地更新&#x2F;创建文档以向客户展示该过程的结果。</p>
+<p>以下是一些练习，以涵盖您所学的内容：</p>
+<p><strong>反思练习</strong></p>
+<ul>
+<li>反映您执行修复验证的时间。您是否使用了“打开”或“关闭”以外的状态，这些状态可能根据本课程中的信息被误用？<ul>
+<li>相反，确定可能标记为“部分已关闭”（或其他状态）的任何结果，并根据所采取的补救措施考虑这些标签是否更准确。</li>
+</ul>
+</li>
+<li>想一想，当你执行修复验证时，你必须在将结果标记为“打开”或“关闭”之间做出决定。哪些因素影响了你的决定？不同的状态能否更清楚地了解调查结果的状态？</li>
+<li>想一想在修复验证后必须更新报告文档的时间。基于上一课中的信息：<ul>
+<li>您是否向客户提供适当的证据和意见，以便审查结果？如果没有，您认为可能遗漏了什么？</li>
+<li>您是否更新了报告中的任何部分（例如执行摘要、战略建议、范围或类似内容）？如果没有，你现在可以这样做吗？</li>
+</ul>
+</li>
+<li>选择您已撰写或有权访问的报告。从报告中确定一些发现，并模拟修复验证过程。这包括想象您将采取哪些步骤来验证补救措施，然后实际记录如何捕获证据并相应地更新报告。</li>
+</ul>
+<p><strong>一般练习</strong></p>
+<ul>
+<li>使用您有权访问的报表，创建一个假设方案，其中安全发现的风险评级因部分修复工作而发生变化。写一个简短的解释，可以包含在报告中，解释为什么发现的风险发生了变化，但状态没有更改为关闭。</li>
+<li>创建要遵循的修复验证工作的清单。<ul>
+<li>启动修复验证需要哪些常见访问请求？（对于不同的评估类型，这可能看起来不同）</li>
+<li>你和客户之间应该发生什么沟通？您通常需要请求哪些信息？</li>
+<li>在审查调查结果时需要编写或捕获哪些内容？</li>
+<li>审查完所有调查结果后，应更新报告文件中的哪些部分？</li>
+</ul>
+</li>
+<li>创建用于跟踪修复验证结果的结果电子表格模板。此模板应包括结果 ID、说明、原始风险评级、修复后的状态（例如打开、关闭、部分关闭）的列，以及支持状态更新的任何注释或证据。</li>
+</ul>
+<h1 id="9-修复时从报表中删除问题"><a href="#9-修复时从报表中删除问题" class="headerlink" title="9-修复时从报表中删除问题"></a>9-修复时从报表中删除问题</h1><p>我想讨论一下我在上一课的“单独文档”部分中简要提到的内容。</p>
+<p>有时，客户可能希望您修改现有报表以删除修复的结果，并调整任何适用的文本，例如执行摘要。当我们开始删除和重写原始报告时，它会改变人们的看法，让它看起来好像一开始就没有发现任何不好的东西。这与原始报告的发现很少有很大不同。当我们的报告存在漏洞时，它可以突出缺乏流程、程序或专业知识（这些内容经常在报告的战略建议部分得到评论）。当您删除已修复的原始发现以及对它们的任何引用时，您可能会掩盖这种看法或潜在的观察结果。</p>
+<p>为此，如果客户要求您在修复调查结果后删除并重写报告的某些部分，我倾向于附加到上一个报告，而不是重写。已关闭的调查结果应保留原状，状态应更改为“已关闭”），并附上证据，并说明调查结果已关闭的原因。对于已审查但仍处于“开放”状态的调查结果也是如此。这样，任何读者都将能够看到最初发现的内容以及任何给定发现的当前状态。</p>
+<h1 id="课程总结-1"><a href="#课程总结-1" class="headerlink" title="课程总结"></a>课程总结</h1><p>当客户要求对报告进行更改以删除以前的发现时，请小心。在报告中捕获随时间推移的变化是一回事，但删除存在的漏洞并假装它们不存在是另一回事。</p>
+
+
+  
+
+</article>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
